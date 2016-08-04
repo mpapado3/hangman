@@ -67,37 +67,39 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_account_details" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-vD-DpD">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="κωδικός" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-xt-FsT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="κωδικός" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-xt-FsT">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Bnp-6N-5iE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Bnp-6N-5iE"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="130" y="514" width="243" height="30"/>
                                     <mask key="constraints">
                                         <include reference="Bnp-6N-5iE"/>
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="da0-SC-Lh4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="da0-SC-Lh4">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Juf-Yi-Gr8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Juf-Yi-Gr8"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="110" y="473" width="263" height="30"/>
                                     <mask key="constraints">
                                         <include reference="Juf-Yi-Gr8"/>
                                     </mask>
@@ -540,6 +542,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-Am-kGb">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14509803921568629" green="0.54509803921568623" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -550,9 +559,29 @@
                             <constraint firstAttribute="bottom" secondItem="vx0-e9-npr" secondAttribute="bottom" id="Lb4-3z-DBN"/>
                             <constraint firstItem="vx0-e9-npr" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" id="LuN-8i-Cif"/>
                             <constraint firstAttribute="trailing" secondItem="UjH-GD-GpT" secondAttribute="trailing" constant="20" id="WrS-Qa-EhI"/>
+                            <constraint firstAttribute="trailing" secondItem="jD6-Am-kGb" secondAttribute="trailing" constant="56" id="avm-Ba-LES"/>
+                            <constraint firstItem="jD6-Am-kGb" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" constant="80" id="cap-w8-pQQ"/>
                             <constraint firstItem="PuE-xG-YKa" firstAttribute="leading" secondItem="ifs-aj-Fhx" secondAttribute="leading" id="e1f-1Z-ASV"/>
                             <constraint firstItem="PuE-xG-YKa" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" constant="64" id="lDo-id-qx6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jD6-Am-kGb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="avm-Ba-LES"/>
+                                <exclude reference="cap-w8-pQQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jD6-Am-kGb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="avm-Ba-LES"/>
+                                <include reference="cap-w8-pQQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -560,6 +589,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="hangerImage" destination="PuE-xG-YKa" id="SmG-Cb-VWT"/>
+                        <outlet property="timerLabel" destination="jD6-Am-kGb" id="EHw-Wd-sM2"/>
                         <outlet property="wordHidden" destination="UjH-GD-GpT" id="LPJ-Lg-maV"/>
                         <segue destination="1AO-UN-vfA" kind="presentation" identifier="resultSegue" modalPresentationStyle="overCurrentContext" id="udK-n0-XqL"/>
                     </connections>
@@ -982,6 +1012,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Jxd-SE-D7n"/>
-        <segue reference="upw-Ex-Cmh"/>
+        <segue reference="udK-n0-XqL"/>
     </inferredMetricsTieBreakers>
 </document>

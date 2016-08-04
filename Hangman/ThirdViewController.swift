@@ -29,12 +29,18 @@ class ThirdViewController: UIViewController {
     var wordToFind = [String]()
     
     var characterCount: Int = 0
+    
+    var count = 15
+    
+    var timer = NSTimer()
 
     @IBOutlet weak var wordHidden: UILabel!
     
     @IBOutlet weak var letterButton: UIButton!
     
     @IBOutlet weak var hangerImage: UIImageView!
+    
+    @IBOutlet weak var timerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,13 +90,26 @@ class ThirdViewController: UIViewController {
                 print((error))
             }
             
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
             
         }
 
         // Do any additional setup after loading the view.
     }
+    
+    func timerUpdate() {
+        if count >= 0 {
+            timerLabel.text = String(count--)
+        }
+    }
 
     @IBAction func letterButtonPressed(sender: AnyObject) {
+        
+        count = 15
+        
+        timer.invalidate()
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
         
         var falseLetter: Bool = true
         
