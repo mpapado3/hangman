@@ -22,5 +22,7 @@ public class gamePlay {
     var letterActive = 0
     
     var gameActive = true
+    
+    
 
 }

@@ -12,6 +12,9 @@
 		AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */; };
 		AB2B9E3B1D50FFA70005BD4F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E3A1D50FFA70005BD4F /* Parse.framework */; };
 		AB2B9E3D1D50FFB40005BD4F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E3C1D50FFB40005BD4F /* Bolts.framework */; };
+		AB4427381D53A5DE00F91D12 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4427371D53A5DE00F91D12 /* libstdc++.6.0.9.dylib */; };
+		AB44273A1D53A60600F91D12 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4427391D53A60600F91D12 /* libsqlite3.dylib */; };
+		AB44273C1D53D0D400F91D12 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44273B1D53D0D400F91D12 /* StartViewController.swift */; };
 		AB6B9C1E1BB08A5B000F7247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B9C1D1BB08A5B000F7247 /* AppDelegate.swift */; };
 		AB6B9C201BB08A5B000F7247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B9C1F1BB08A5B000F7247 /* ViewController.swift */; };
 		AB6B9C231BB08A5B000F7247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6B9C211BB08A5B000F7247 /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 		AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AB2B9E3A1D50FFA70005BD4F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		AB2B9E3C1D50FFB40005BD4F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		AB4427371D53A5DE00F91D12 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "../../../../../usr/lib/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
+		AB4427391D53A60600F91D12 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		AB44273B1D53D0D400F91D12 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		AB6B9C1A1BB08A5B000F7247 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6B9C1D1BB08A5B000F7247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6B9C1F1BB08A5B000F7247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB44273A1D53A60600F91D12 /* libsqlite3.dylib in Frameworks */,
+				AB4427381D53A5DE00F91D12 /* libstdc++.6.0.9.dylib in Frameworks */,
 				AB2B9E3D1D50FFB40005BD4F /* Bolts.framework in Frameworks */,
 				AB2B9E3B1D50FFA70005BD4F /* Parse.framework in Frameworks */,
 				AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */,
@@ -64,10 +72,7 @@
 		AB6B9C111BB08A5B000F7247 = {
 			isa = PBXGroup;
 			children = (
-				AB2B9E3C1D50FFB40005BD4F /* Bolts.framework */,
-				AB2B9E3A1D50FFA70005BD4F /* Parse.framework */,
-				AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */,
-				AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */,
+				AB6E1AEC1D5102B900597973 /* Frameworks */,
 				AB6B9C1C1BB08A5B000F7247 /* Hangman */,
 				AB6B9C1B1BB08A5B000F7247 /* Products */,
 			);
@@ -85,20 +90,34 @@
 			isa = PBXGroup;
 			children = (
 				ABB4F7311BC0203900A229E0 /* hangman.png */,
-				AB2420E91BC10DF60060EC9E /* gamePlay.swift */,
 				ABA19AA71D40213F0043BB86 /* words.ini */,
 				ABFD676E1BB1EA1900411676 /* words-old.ini */,
+				AB2420E91BC10DF60060EC9E /* gamePlay.swift */,
 				AB6B9C1D1BB08A5B000F7247 /* AppDelegate.swift */,
 				AB6B9C1F1BB08A5B000F7247 /* ViewController.swift */,
 				ABFD67921BB1F59B00411676 /* SecondViewController.swift */,
 				ABB4F72F1BC018D600A229E0 /* ThirdViewController.swift */,
+				ABD49E561D4FD6B100B42957 /* WinViewController.swift */,
 				AB6B9C211BB08A5B000F7247 /* Main.storyboard */,
-				AB6B9C241BB08A5B000F7247 /* Assets.xcassets */,
 				AB6B9C261BB08A5B000F7247 /* LaunchScreen.storyboard */,
 				AB6B9C291BB08A5B000F7247 /* Info.plist */,
-				ABD49E561D4FD6B100B42957 /* WinViewController.swift */,
+				AB6B9C241BB08A5B000F7247 /* Assets.xcassets */,
+				AB44273B1D53D0D400F91D12 /* StartViewController.swift */,
 			);
 			path = Hangman;
+			sourceTree = "<group>";
+		};
+		AB6E1AEC1D5102B900597973 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB4427391D53A60600F91D12 /* libsqlite3.dylib */,
+				AB4427371D53A5DE00F91D12 /* libstdc++.6.0.9.dylib */,
+				AB2B9E3C1D50FFB40005BD4F /* Bolts.framework */,
+				AB2B9E3A1D50FFA70005BD4F /* Parse.framework */,
+				AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */,
+				AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB2420EA1BC10DF60060EC9E /* gamePlay.swift in Sources */,
+				AB44273C1D53D0D400F91D12 /* StartViewController.swift in Sources */,
 				ABFD67931BB1F59B00411676 /* SecondViewController.swift in Sources */,
 				AB6B9C201BB08A5B000F7247 /* ViewController.swift in Sources */,
 				ABD49E571D4FD6B100B42957 /* WinViewController.swift in Sources */,
