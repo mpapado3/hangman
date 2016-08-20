@@ -95,11 +95,55 @@ class ThirdViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+        
     }
     
     func timerUpdate() {
-        if count >= 0 {
-            timerLabel.text = String(count--)
+        
+        timerLabel.text = String(count--)
+        
+        if count == -1 {
+            
+            timer.invalidate()
+            
+            count = 15
+            
+            wrongLetters += 1
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
+             
+            print(wrongLetters)
+            
+            if wrongLetters == 6 {
+                
+                gameActive = false
+                
+                print("You Lose")
+                
+                label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
+                
+                performSegueWithIdentifier("resultSegue", sender: nil)
+                
+            }
+             
+            switch wrongLetters {
+            case 1:
+            self.hangerImage.image = UIImage(named: "head.png")
+            case 2:
+            self.hangerImage.image = UIImage(named: "body.png")
+            case 3:
+            self.hangerImage.image = UIImage(named: "left_hand.png")
+            case 4:
+            self.hangerImage.image = UIImage(named: "right_hand.png")
+            case 5:
+            self.hangerImage.image = UIImage(named: "left_leg.png")
+            case 6:
+            self.hangerImage.image = UIImage(named: "right_leg.png")
+            default:
+            print("nothing")
+
+            }
+            
         }
     }
 
@@ -122,83 +166,14 @@ class ThirdViewController: UIViewController {
             let disableMyButton = sender as? UIButton
             disableMyButton!.enabled = false
             
-           /* if wordToFind.contains(letters[sender.tag - 1]) {
-            
-                print(letters[sender.tag - 1])
-            
-                let indexOfLetters = wordToFind.indexOf(letters[sender.tag - 1])
-            
-                if indexOfLetters > 1 {
-                
-                    for (i = 0; i < indexOfLetters; i += 1) {
-                    
-                        hiddenArray[i] = letters[sender.tag - 1]
-                        wordHidden.text = hiddenArray.joinWithSeparator(" ")
-                    
-                    }
-                
-                } else if wrongLetters < 6 && i == wordToFind.count - 1 {
-                    
-                    wrongLetters += 1
-                    
-                    print(wrongLetters)
-                    
-                    switch wrongLetters {
-                    case 1:
-                        self.hangerImage.image = UIImage(named: "head.png")
-                    case 2:
-                        self.hangerImage.image = UIImage(named: "body.png")
-                    case 3:
-                        self.hangerImage.image = UIImage(named: "left_hand.png")
-                    case 4:
-                        self.hangerImage.image = UIImage(named: "right_hand.png")
-                    case 5:
-                        self.hangerImage.image = UIImage(named: "left_leg.png")
-                    case 6:
-                        self.hangerImage.image = UIImage(named: "right_leg.png")
-                    default:
-                        print("nothing")
-                    }
-                    
-                }  else {
-                    print("You Lose!")
-             }
-
-            } */
-            
-             for (var i = 1;i<wordToFind.count - 1;i++) {
+            for (var i = 1;i<wordToFind.count - 1;i++) {
                 if wordToFind[i] == letters[sender.tag - 1] {
                     hiddenArray[i] = letters[sender.tag - 1]
                     wordHidden.text = hiddenArray.joinWithSeparator(" ")
                     lettersFound += 1
                     falseLetter = false
                     
-                }  /*else if wrongLetters < 6 && i == wordToFind.count - 1 {
-                    
-                    wrongLetters += 1
-                    
-                    print(wrongLetters)
-                    
-                    switch wrongLetters {
-                    case 1:
-                        self.hangerImage.image = UIImage(named: "head.png")
-                    case 2:
-                        self.hangerImage.image = UIImage(named: "body.png")
-                    case 3:
-                        self.hangerImage.image = UIImage(named: "left_hand.png")
-                    case 4:
-                        self.hangerImage.image = UIImage(named: "right_hand.png")
-                    case 5:
-                        self.hangerImage.image = UIImage(named: "left_leg.png")
-                    case 6:
-                        self.hangerImage.image = UIImage(named: "right_leg.png")
-                    default:
-                        print("nothing")
-                    }
-                    
-                }   else {
-                    print("You Lose!")
-                } */
+                }
             }
                 
             if falseLetter == true && wrongLetters < 6 {
@@ -247,19 +222,7 @@ class ThirdViewController: UIViewController {
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
                 
-                /*
-                let winViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-                let vController: UIViewController = winViewController.instantiateViewControllerWithIdentifier("WinViewController") as UIViewController
-                self.presentViewController(vController, animated: true, completion: nil)
-                */
-                
                 performSegueWithIdentifier("resultSegue", sender: nil)
-                
-                /*
-                let winViewController = WinViewController()
-                winViewController.modalPresentationStyle = .OverCurrentContext
-                self.presentViewController(winViewController, animated: true, completion: nil)
-                */
                 
             }
             
@@ -267,6 +230,8 @@ class ThirdViewController: UIViewController {
         
         
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

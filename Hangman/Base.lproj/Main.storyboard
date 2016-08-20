@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pJz-7X-XFW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -13,12 +13,13 @@
                         <viewControllerLayoutGuide type="bottom" id="RCY-vW-Ijk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m6C-pT-JMo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Com-B1-SGt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Com-B1-SGt">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prc-80-d2t" userLabel="Connect_Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prc-80-d2t" userLabel="Connect_Button">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="LWT-KN-tjZ"/>
@@ -41,7 +42,7 @@
                                     <action selector="connectPlayerButton:" destination="pJz-7X-XFW" eventType="touchUpInside" id="0L2-M8-ucf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td4-1B-HSd" userLabel="New_Player_button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td4-1B-HSd" userLabel="New_Player_button">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="Uiz-iU-ljU"/>
@@ -64,10 +65,10 @@
                                     <action selector="newPlayerButton:" destination="pJz-7X-XFW" eventType="touchUpInside" id="SfT-If-4tT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_account_details" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-vD-DpD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="create_account_details" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-vD-DpD">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="κωδικός" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-xt-FsT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="κωδικός" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-xt-FsT">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Bnp-6N-5iE"/>
@@ -79,14 +80,13 @@
                                         <exclude reference="Bnp-6N-5iE"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="514" width="243" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Bnp-6N-5iE"/>
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="da0-SC-Lh4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="da0-SC-Lh4">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Juf-Yi-Gr8"/>
@@ -98,8 +98,7 @@
                                         <exclude reference="Juf-Yi-Gr8"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="110" y="473" width="263" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Juf-Yi-Gr8"/>
                                     </mask>
@@ -157,25 +156,25 @@
                                 <include reference="gk4-FN-n0L"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="hrv-y2-uP3"/>
+                                <include reference="iju-dB-OSp"/>
                                 <include reference="5qm-gO-esc"/>
                                 <include reference="8Tu-cL-izZ"/>
                                 <include reference="CLZ-pM-AXe"/>
                                 <include reference="Vnn-DO-61V"/>
-                                <include reference="hrv-y2-uP3"/>
-                                <include reference="iju-dB-OSp"/>
-                                <include reference="L72-OT-9ts"/>
-                                <include reference="i6y-zS-V7B"/>
                                 <include reference="1ZV-tD-wCx"/>
                                 <include reference="DrM-uX-uyX"/>
                                 <include reference="uiG-Vp-Eoh"/>
+                                <include reference="4op-KG-pwz"/>
+                                <include reference="6Kd-tX-4wE"/>
+                                <include reference="L72-OT-9ts"/>
+                                <include reference="i6y-zS-V7B"/>
                                 <include reference="TIz-YO-zoe"/>
                                 <include reference="mhG-is-0dE"/>
                                 <include reference="pbl-da-Wpx"/>
                                 <include reference="8gE-ZN-63p"/>
                                 <include reference="M4M-0K-hOu"/>
                                 <include reference="WhB-5s-4Tn"/>
-                                <include reference="4op-KG-pwz"/>
-                                <include reference="6Kd-tX-4wE"/>
                             </mask>
                         </variation>
                     </view>
@@ -228,6 +227,9 @@
                                 <state key="normal" title="2 παίκτες">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="103" y="357" width="195" height="69"/>
+                                </variation>
                                 <connections>
                                     <segue destination="YCi-N3-JBd" kind="show" id="sbY-YX-bU4"/>
                                 </connections>
@@ -682,11 +684,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="c47-LZ-Bgr">
                                 <rect key="frame" x="0.0" y="64" width="250" height="337"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="62" width="250" height="337"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-rf-Sdr">
                                 <rect key="frame" x="18" y="327" width="30" height="30"/>
@@ -694,6 +696,9 @@
                                 <state key="normal" title="Α">
                                     <color key="titleColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="328" width="30" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="voq-SZ-zSi"/>
                                 </connections>
@@ -714,6 +719,9 @@
                                 <state key="normal" title="Γ">
                                     <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="324" width="30" height="33"/>
+                                </variation>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="v24-4T-bH3"/>
                                 </connections>
@@ -954,6 +962,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.5490196078431373" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1011,7 +1022,7 @@
         <image name="new_player_button" width="96" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jxd-SE-D7n"/>
-        <segue reference="udK-n0-XqL"/>
+        <segue reference="NMv-wu-jqX"/>
+        <segue reference="upw-Ex-Cmh"/>
     </inferredMetricsTieBreakers>
 </document>
