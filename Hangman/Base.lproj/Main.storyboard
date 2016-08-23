@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -13,14 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="RCY-vW-Ijk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m6C-pT-JMo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Com-B1-SGt">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prc-80-d2t" userLabel="Connect_Button">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Com-B1-SGt"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prc-80-d2t" userLabel="Connect_Button">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="LWT-KN-tjZ"/>
                                     <constraint firstAttribute="width" constant="96" id="ZYh-8b-grI"/>
@@ -42,8 +41,7 @@
                                     <action selector="connectPlayerButton:" destination="pJz-7X-XFW" eventType="touchUpInside" id="0L2-M8-ucf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td4-1B-HSd" userLabel="New_Player_button">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td4-1B-HSd" userLabel="New_Player_button">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="Uiz-iU-ljU"/>
                                     <constraint firstAttribute="height" constant="79" id="wNK-nx-yt7"/>
@@ -65,11 +63,8 @@
                                     <action selector="newPlayerButton:" destination="pJz-7X-XFW" eventType="touchUpInside" id="SfT-If-4tT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="create_account_details" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-vD-DpD">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="κωδικός" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-xt-FsT">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_account_details" translatesAutoresizingMaskIntoConstraints="NO" id="YKY-vD-DpD"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="κωδικός" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zcM-xt-FsT">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Bnp-6N-5iE"/>
                                 </constraints>
@@ -86,8 +81,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="da0-SC-Lh4">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="da0-SC-Lh4">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Juf-Yi-Gr8"/>
                                 </constraints>
@@ -105,14 +99,13 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gk4-FN-n0L" userLabel="Accept_Button">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="accept_button"/>
                                 <connections>
                                     <action selector="acceptButton:" destination="pJz-7X-XFW" eventType="touchUpInside" id="cD5-hL-ahc"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="YKY-vD-DpD" secondAttribute="bottom" constant="168" id="1ZV-tD-wCx"/>
                             <constraint firstAttribute="bottom" secondItem="Prc-80-d2t" secondAttribute="bottom" constant="150" id="4op-KG-pwz"/>
@@ -139,11 +132,11 @@
                                 <exclude reference="gk4-FN-n0L"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="hrv-y2-uP3"/>
-                                <exclude reference="iju-dB-OSp"/>
                                 <exclude reference="mhG-is-0dE"/>
                                 <exclude reference="pbl-da-Wpx"/>
                                 <exclude reference="M4M-0K-hOu"/>
+                                <exclude reference="hrv-y2-uP3"/>
+                                <exclude reference="iju-dB-OSp"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -156,32 +149,30 @@
                                 <include reference="gk4-FN-n0L"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="hrv-y2-uP3"/>
-                                <include reference="iju-dB-OSp"/>
                                 <include reference="5qm-gO-esc"/>
                                 <include reference="8Tu-cL-izZ"/>
                                 <include reference="CLZ-pM-AXe"/>
                                 <include reference="Vnn-DO-61V"/>
-                                <include reference="1ZV-tD-wCx"/>
-                                <include reference="DrM-uX-uyX"/>
-                                <include reference="uiG-Vp-Eoh"/>
                                 <include reference="4op-KG-pwz"/>
                                 <include reference="6Kd-tX-4wE"/>
                                 <include reference="L72-OT-9ts"/>
                                 <include reference="i6y-zS-V7B"/>
+                                <include reference="1ZV-tD-wCx"/>
+                                <include reference="DrM-uX-uyX"/>
+                                <include reference="uiG-Vp-Eoh"/>
                                 <include reference="TIz-YO-zoe"/>
                                 <include reference="mhG-is-0dE"/>
                                 <include reference="pbl-da-Wpx"/>
                                 <include reference="8gE-ZN-63p"/>
                                 <include reference="M4M-0K-hOu"/>
                                 <include reference="WhB-5s-4Tn"/>
+                                <include reference="hrv-y2-uP3"/>
+                                <include reference="iju-dB-OSp"/>
                             </mask>
                         </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="acceptButtonOutlet" destination="gk4-FN-n0L" id="i6c-bA-QF0"/>
                         <outlet property="connectPlayerButtonOutlet" destination="Prc-80-d2t" id="IlM-iP-cal"/>
@@ -205,38 +196,35 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-Qp-U1D">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-Qp-U1D"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-3m-arX">
-                                <rect key="frame" x="109" y="250" width="196" height="69"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                 <state key="normal" title="1 παίκτης">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="oJc-wP-QWR" kind="show" id="Ag9-JL-Xxh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rVv-5p-Fz4">
-                                <rect key="frame" x="110" y="350" width="195" height="69"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                 <state key="normal" title="2 παίκτες">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="103" y="357" width="195" height="69"/>
-                                </variation>
                                 <connections>
-                                    <segue destination="YCi-N3-JBd" kind="show" id="sbY-YX-bU4"/>
+                                    <segue destination="58g-yk-pWT" kind="show" id="wZq-xv-9F9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.14509803921568629" green="0.54509803921568623" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14509803921568629" green="0.54509803921568623" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VNf-Qp-U1D" secondAttribute="trailing" id="C3h-1i-uPs"/>
+                            <constraint firstItem="VNf-Qp-U1D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ODe-J3-Ik3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VNf-Qp-U1D" secondAttribute="bottom" id="OZI-97-vNI"/>
+                            <constraint firstItem="VNf-Qp-U1D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ScX-Ay-T5d"/>
                             <constraint firstItem="PNW-3m-arX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Umh-6m-0rv"/>
                             <constraint firstAttribute="bottom" secondItem="VNf-Qp-U1D" secondAttribute="bottom" id="XEd-Z7-Gtz"/>
                             <constraint firstItem="rVv-5p-Fz4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="guQ-fG-cEB"/>
@@ -246,11 +234,25 @@
                             <constraint firstItem="VNf-Qp-U1D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="veB-bh-Nkd"/>
                             <constraint firstAttribute="trailing" secondItem="VNf-Qp-U1D" secondAttribute="trailing" id="xaY-a4-Pfh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="C3h-1i-uPs"/>
+                                <exclude reference="ODe-J3-Ik3"/>
+                                <exclude reference="ScX-Ay-T5d"/>
+                                <exclude reference="OZI-97-vNI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="C3h-1i-uPs"/>
+                                <include reference="ODe-J3-Ik3"/>
+                                <include reference="ScX-Ay-T5d"/>
+                                <include reference="OZI-97-vNI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,330 +267,310 @@
                         <viewControllerLayoutGuide type="bottom" id="cyv-yj-3aF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ifs-aj-Fhx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-e9-npr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-e9-npr">
+                                <frame key="frameInset"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-xG-YKa">
-                                <rect key="frame" x="0.0" y="64" width="250" height="337"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-xG-YKa">
+                                <frame key="frameInset" minX="-1" minY="86" width="59.31%" height="51.81%"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBI-AB-L2B">
-                                <rect key="frame" x="60" y="427" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Β">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="WXH-NP-8Rl"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="Xgt-YY-3jU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1z-9W-cyo">
-                                <rect key="frame" x="98" y="427" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Γ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="DtN-t2-DdN"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="GXE-VL-0Ku"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-0I-eti">
-                                <rect key="frame" x="136" y="426" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Δ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Rea-mp-oKd"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="pIM-ea-3pl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-j0-zcc">
-                                <rect key="frame" x="27" y="428" width="30" height="30"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Α">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="GNw-kA-SId"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="auc-Wf-Sum"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE8-ej-jyS">
-                                <rect key="frame" x="174" y="427" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ε">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="8Ij-TB-Zib"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="NNm-Nt-ua8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfF-1j-AiC">
-                                <rect key="frame" x="212" y="427" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ζ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="aLA-0W-oxy"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="f7m-AB-OSW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-G3-wMr">
-                                <rect key="frame" x="250" y="427" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Η">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="IKl-Wf-h4h"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="aMj-gB-qbd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59j-nP-c2n">
-                                <rect key="frame" x="279" y="427" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Θ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="UqX-yX-fym"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="jjE-iq-7Iv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2S-DO-K0D">
-                                <rect key="frame" x="60" y="466" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Κ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="JgC-Zk-F7Z"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="biS-bk-KIt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-oc-zJJ">
-                                <rect key="frame" x="98" y="466" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Λ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="4cr-TI-Cnx"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="MdV-Sm-7P6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU7-8W-pDf">
-                                <rect key="frame" x="136" y="465" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Μ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="eGF-Qo-n8w"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="xmf-WA-0Sr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-i7-5lA">
-                                <rect key="frame" x="27" y="465" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ι">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="hzg-cb-cgz"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="x4Y-1A-neQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zq-Eo-lIT">
-                                <rect key="frame" x="174" y="466" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ν">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Aaq-uO-6Dg"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="rjX-LU-xdW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duN-Ls-2Tf">
-                                <rect key="frame" x="212" y="466" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ξ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="ONR-9P-LSE"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="p4r-9M-vPm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKT-yw-QXq">
-                                <rect key="frame" x="250" y="466" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ο">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="MWk-sv-tQh"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="lt4-B2-qAh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iey-aD-NyF">
-                                <rect key="frame" x="279" y="466" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Π">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="S2f-w2-b4E"/>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="cAz-ZK-Sex"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syU-hn-5Sz">
-                                <rect key="frame" x="60" y="507" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Σ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="HeI-gh-KaY"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="QUm-4T-Rn4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Zc-zSt">
-                                <rect key="frame" x="98" y="507" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Τ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="G7c-Tr-Q9R"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="NkT-59-aWG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u84-T9-3dP">
-                                <rect key="frame" x="136" y="506" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Υ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="4ad-Os-uXC"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="9EV-BK-DOh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exV-Pn-QrJ">
-                                <rect key="frame" x="27" y="506" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ρ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="AhO-LX-SZT"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="kt0-nP-3Yy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-ZM-yXV">
-                                <rect key="frame" x="174" y="507" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Φ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="9qY-Gy-OLd"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="H4h-fC-BPY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apy-XH-pQi">
-                                <rect key="frame" x="212" y="507" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Χ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="DEx-ly-T82"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="k5g-1N-7jI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdA-U8-baN">
-                                <rect key="frame" x="250" y="507" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ψ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="PA9-qP-ykS"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="SFS-nY-jsS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDM-HI-BfP">
-                                <rect key="frame" x="279" y="507" width="30" height="33"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Ω">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="MBU-mA-LlF"/>
-                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="qW7-Zm-7IA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-GD-GpT">
-                                <rect key="frame" x="20" y="350" width="374" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-GD-GpT">
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-Am-kGb">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="33"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-Am-kGb">
+                                <frame key="frameInset" minY="65" width="14.33%" height="11.30%" maxX="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fz5-yy-bhF" userLabel="Letters Stack View">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-qr-A2E" userLabel="A Letters Stack View">
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-j0-zcc">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Α">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="GNw-kA-SId"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="auc-Wf-Sum"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBI-AB-L2B">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Β">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="WXH-NP-8Rl"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="Xgt-YY-3jU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1z-9W-cyo">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Γ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="DtN-t2-DdN"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="GXE-VL-0Ku"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPT-0I-eti">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Δ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Rea-mp-oKd"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="pIM-ea-3pl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE8-ej-jyS">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ε">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="8Ij-TB-Zib"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="NNm-Nt-ua8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfF-1j-AiC">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ζ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="aLA-0W-oxy"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="f7m-AB-OSW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF5-G3-wMr">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Η">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="IKl-Wf-h4h"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="aMj-gB-qbd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59j-nP-c2n">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Θ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="UqX-yX-fym"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="jjE-iq-7Iv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="amt-E5-xYN" userLabel="I Letters Stack View">
+                                        <subviews>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54h-i7-5lA">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ι">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="hzg-cb-cgz"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="x4Y-1A-neQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2S-DO-K0D">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Κ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="JgC-Zk-F7Z"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="biS-bk-KIt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-oc-zJJ">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Λ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="4cr-TI-Cnx"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="MdV-Sm-7P6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU7-8W-pDf">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Μ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="eGF-Qo-n8w"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="xmf-WA-0Sr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zq-Eo-lIT">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ν">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Aaq-uO-6Dg"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="rjX-LU-xdW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duN-Ls-2Tf">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ξ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="ONR-9P-LSE"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="p4r-9M-vPm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKT-yw-QXq">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ο">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="MWk-sv-tQh"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="lt4-B2-qAh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iey-aD-NyF">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Π">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="S2f-w2-b4E"/>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="cAz-ZK-Sex"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="QLs-uc-FA6" userLabel="R Letters Stack View">
+                                        <subviews>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exV-Pn-QrJ">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ρ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="AhO-LX-SZT"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="kt0-nP-3Yy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syU-hn-5Sz">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Σ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="HeI-gh-KaY"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="QUm-4T-Rn4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mo-Zc-zSt">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Τ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="G7c-Tr-Q9R"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="NkT-59-aWG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u84-T9-3dP">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Υ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="4ad-Os-uXC"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="9EV-BK-DOh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-ZM-yXV">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Φ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="9qY-Gy-OLd"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="H4h-fC-BPY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apy-XH-pQi">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Χ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="DEx-ly-T82"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="k5g-1N-7jI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdA-U8-baN">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ψ">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="PA9-qP-ykS"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="SFS-nY-jsS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDM-HI-BfP">
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <state key="normal" title="Ω">
+                                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonPressed:" destination="oJc-wP-QWR" eventType="touchUpInside" id="MBU-mA-LlF"/>
+                                                    <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="qW7-Zm-7IA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.14509803921568629" green="0.54509803921568623" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14509803921568629" green="0.54509803921568623" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UjH-GD-GpT" firstAttribute="leading" secondItem="ifs-aj-Fhx" secondAttribute="leading" constant="20" id="6FT-0x-nrv"/>
-                            <constraint firstItem="vx0-e9-npr" firstAttribute="leading" secondItem="ifs-aj-Fhx" secondAttribute="leading" id="6SA-Yy-XWZ"/>
-                            <constraint firstAttribute="trailing" secondItem="vx0-e9-npr" secondAttribute="trailing" id="IMZ-kR-CAU"/>
+                            <constraint firstItem="fz5-yy-bhF" firstAttribute="centerX" secondItem="ifs-aj-Fhx" secondAttribute="centerX" id="FSC-h1-Ita"/>
+                            <constraint firstItem="fz5-yy-bhF" firstAttribute="leading" secondItem="ifs-aj-Fhx" secondAttribute="leadingMargin" constant="5" id="Fu5-Ud-SNi"/>
                             <constraint firstItem="UjH-GD-GpT" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" constant="350" id="K5h-1q-dD2"/>
-                            <constraint firstAttribute="bottom" secondItem="vx0-e9-npr" secondAttribute="bottom" id="Lb4-3z-DBN"/>
-                            <constraint firstItem="vx0-e9-npr" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" id="LuN-8i-Cif"/>
                             <constraint firstAttribute="trailing" secondItem="UjH-GD-GpT" secondAttribute="trailing" constant="20" id="WrS-Qa-EhI"/>
-                            <constraint firstAttribute="trailing" secondItem="jD6-Am-kGb" secondAttribute="trailing" constant="56" id="avm-Ba-LES"/>
-                            <constraint firstItem="jD6-Am-kGb" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" constant="80" id="cap-w8-pQQ"/>
-                            <constraint firstItem="PuE-xG-YKa" firstAttribute="leading" secondItem="ifs-aj-Fhx" secondAttribute="leading" id="e1f-1Z-ASV"/>
-                            <constraint firstItem="PuE-xG-YKa" firstAttribute="top" secondItem="ifs-aj-Fhx" secondAttribute="top" constant="64" id="lDo-id-qx6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fz5-yy-bhF" secondAttribute="trailing" constant="5" id="goq-Ey-k22"/>
+                            <constraint firstItem="cyv-yj-3aF" firstAttribute="top" secondItem="fz5-yy-bhF" secondAttribute="bottom" constant="15" id="uN5-ej-pQr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="jD6-Am-kGb"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="avm-Ba-LES"/>
-                                <exclude reference="cap-w8-pQQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="jD6-Am-kGb"/>
                             </mask>
-                            <mask key="constraints">
-                                <include reference="avm-Ba-LES"/>
-                                <include reference="cap-w8-pQQ"/>
-                            </mask>
                         </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="hangerImage" destination="PuE-xG-YKa" id="SmG-Cb-VWT"/>
                         <outlet property="timerLabel" destination="jD6-Am-kGb" id="EHw-Wd-sM2"/>
@@ -598,7 +580,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0k-sr-Q7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="134.25"/>
+            <point key="canvasLocation" x="1590" y="121.25"/>
         </scene>
         <!--WinViewController-->
         <scene sceneID="suN-le-PXN">
@@ -609,20 +591,20 @@
                         <viewControllerLayoutGuide type="bottom" id="5Av-Y6-pbg"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="kgd-wG-ZAH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-IH-5x4">
-                                <rect key="frame" x="134" y="210" width="146" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-IH-5x4">
+                                <frame key="frameInset" minX="134" minY="210" width="146" height="21"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="32"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-Fh-aad">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-Fh-aad">
+                                <frame key="frameInset" minX="-23" minY="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
                                 <state key="normal" title="Παίξε Ξανά!">
-                                    <color key="titleColor" red="0.55686274509803924" green="0.32941176470588235" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.55686274509803924" green="0.32941176470588235" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playAgainButton:" destination="1AO-UN-vfA" eventType="touchUpInside" id="0ch-zg-wl6"/>
@@ -661,8 +643,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="looseMessageLabel" destination="Ra4-IH-5x4" id="H6H-u3-hak"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startAgainSegue" id="NMv-wu-jqX"/>
@@ -671,6 +651,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNq-ov-1yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2419.5" y="676.5"/>
+        </scene>
+        <!--WordSelectionView-->
+        <scene sceneID="aPa-qz-CEG">
+            <objects>
+                <viewController title="WordSelectionView" id="58g-yk-pWT" customClass="WordSelectionViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2F0-PA-O3L"/>
+                        <viewControllerLayoutGuide type="bottom" id="sjM-Ye-Vcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Np-Nw-WLD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-lI-Yak">
+                                <frame key="frameInset"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Δώσε την λέξη που θέλεις!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-tW-j5G">
+                                <frame key="frameInset" minX="20" height="6.05%" maxX="20" maxY="221"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-2e-ZYR">
+                                <frame key="frameInset" minX="19" height="30" maxX="19" maxY="157"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-S5-DPd">
+                                <frame key="frameInset" minX="145" height="6.38%" maxX="145" maxY="87"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <state key="normal" title="OK!">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButton:" destination="58g-yk-pWT" eventType="touchUpInside" id="03C-Po-mXr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="newWord" destination="Kls-2e-ZYR" id="r0F-hg-81q"/>
+                        <segue destination="YCi-N3-JBd" kind="show" identifier="2PlayerSegue" id="cCO-PO-jC7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf7-Im-5Zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="1082"/>
         </scene>
         <!--SecondViewController-->
         <scene sceneID="TAN-mk-HsO">
@@ -681,292 +712,284 @@
                         <viewControllerLayoutGuide type="bottom" id="cE5-9T-Nke"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FNB-dx-ulz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="c47-LZ-Bgr">
-                                <rect key="frame" x="0.0" y="64" width="250" height="337"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="62" width="250" height="337"/>
-                                </variation>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="c47-LZ-Bgr"/>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-rf-Sdr">
-                                <rect key="frame" x="18" y="327" width="30" height="30"/>
+                                <frame key="frameInset" minX="18" minY="327" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Α">
-                                    <color key="titleColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="328" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="voq-SZ-zSi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO1-Gu-mjf">
-                                <rect key="frame" x="51" y="325" width="30" height="33"/>
+                                <frame key="frameInset" minX="51" minY="325" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Β">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="mcb-Hn-wFG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="len-Vw-b65">
-                                <rect key="frame" x="89" y="325" width="30" height="33"/>
+                                <frame key="frameInset" minX="89" minY="325" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Γ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="105" y="324" width="30" height="33"/>
-                                </variation>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="v24-4T-bH3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-z3-ovY">
-                                <rect key="frame" x="127" y="325" width="30" height="33"/>
+                                <frame key="frameInset" minX="127" minY="325" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Δ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="3F5-Eb-hec"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy9-zG-Qhg">
-                                <rect key="frame" x="165" y="325" width="30" height="33"/>
+                                <frame key="frameInset" minX="165" minY="325" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ε">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="du9-23-u3J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R38-fW-mvi">
-                                <rect key="frame" x="203" y="324" width="30" height="33"/>
+                                <frame key="frameInset" minX="203" minY="324" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ζ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="dDk-ar-Taq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEP-fW-mOM">
-                                <rect key="frame" x="241" y="324" width="30" height="33"/>
+                                <frame key="frameInset" minX="241" minY="324" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Η">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Kiy-Iz-jwt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGB-X5-9EW">
-                                <rect key="frame" x="270" y="324" width="30" height="33"/>
+                                <frame key="frameInset" minX="270" minY="324" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Θ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="LGz-HI-zRu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7R-uS-R24">
-                                <rect key="frame" x="18" y="366" width="30" height="33"/>
+                                <frame key="frameInset" minX="18" minY="366" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ι">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="qa7-Qs-fPJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-Fk-IsN">
-                                <rect key="frame" x="51" y="366" width="30" height="33"/>
+                                <frame key="frameInset" minX="51" minY="366" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Κ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="LQ5-d7-Tbj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGf-PP-0T2">
-                                <rect key="frame" x="89" y="366" width="30" height="33"/>
+                                <frame key="frameInset" minX="89" minY="366" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Λ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Slv-IE-wnL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmz-5x-AxX">
-                                <rect key="frame" x="127" y="366" width="30" height="33"/>
+                                <frame key="frameInset" minX="127" minY="366" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Μ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="aZS-zY-s2Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-8p-LmJ">
-                                <rect key="frame" x="165" y="366" width="30" height="33"/>
+                                <frame key="frameInset" minX="165" minY="366" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ν">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Eaa-Lp-G0K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-r7-i66">
-                                <rect key="frame" x="203" y="365" width="30" height="33"/>
+                                <frame key="frameInset" minX="203" minY="365" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ξ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="lle-XL-qNW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rr-i5-9ak">
-                                <rect key="frame" x="241" y="365" width="30" height="33"/>
+                                <frame key="frameInset" minX="241" minY="365" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ο">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="KAo-9I-6xf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzt-Uw-Ycj">
-                                <rect key="frame" x="270" y="365" width="30" height="33"/>
+                                <frame key="frameInset" minX="270" minY="365" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Π">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="yXP-GB-Kc1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJe-4E-RNl">
-                                <rect key="frame" x="18" y="407" width="30" height="33"/>
+                                <frame key="frameInset" minX="18" minY="407" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ρ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Z14-Qd-Rjv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQR-ks-mne">
-                                <rect key="frame" x="51" y="407" width="30" height="33"/>
+                                <frame key="frameInset" minX="51" minY="407" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Σ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="DOT-ki-LuG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB4-e9-gSa">
-                                <rect key="frame" x="89" y="407" width="30" height="33"/>
+                                <frame key="frameInset" minX="89" minY="407" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Τ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Ha9-2I-LAW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0M-Dm-5Y0">
-                                <rect key="frame" x="127" y="407" width="30" height="33"/>
+                                <frame key="frameInset" minX="127" minY="407" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Υ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="vWX-aF-Ytg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bx-ym-gsm">
-                                <rect key="frame" x="165" y="407" width="30" height="33"/>
+                                <frame key="frameInset" minX="165" minY="407" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Φ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="neP-HQ-Jh3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE6-aT-9hu">
-                                <rect key="frame" x="203" y="406" width="30" height="33"/>
+                                <frame key="frameInset" minX="203" minY="406" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Χ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="oQy-Md-ZK7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-7o-CRu">
-                                <rect key="frame" x="241" y="406" width="30" height="33"/>
+                                <frame key="frameInset" minX="241" minY="406" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ψ">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="Bi1-Nm-v8r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNZ-VN-tjM">
-                                <rect key="frame" x="270" y="406" width="30" height="33"/>
+                                <frame key="frameInset" minX="270" minY="406" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Ω">
-                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="letterButtonPressed:" destination="YCi-N3-JBd" eventType="touchUpInside" id="lyg-fP-ltb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Δώσε την λέξη που θέλεις!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-tW-j5G">
-                                <rect key="frame" x="20" y="461" width="280" height="21"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-Vg-1ao">
-                                <rect key="frame" x="20" y="282" width="280" height="21"/>
+                                <frame key="frameInset" minX="20" minY="282" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-S5-DPd">
-                                <rect key="frame" x="144" y="530" width="30" height="30"/>
-                                <state key="normal" title="OK!">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="okButton:" destination="YCi-N3-JBd" eventType="touchUpInside" id="sjT-JP-akb"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-2e-ZYR">
-                                <rect key="frame" x="18" y="498" width="282" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu"/>
                         </subviews>
-                        <color key="backgroundColor" red="0.14901960784313725" green="0.5490196078431373" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14901960784313725" green="0.5490196078431373" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="c47-LZ-Bgr" firstAttribute="top" secondItem="FNB-dx-ulz" secondAttribute="top" constant="64" id="8Ac-xf-SCX"/>
                             <constraint firstAttribute="bottom" secondItem="KTM-TZ-Rnu" secondAttribute="bottom" id="GJh-ii-Hqn"/>
@@ -996,13 +1019,9 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="hangerImage2" destination="c47-LZ-Bgr" id="39f-Yn-bjE"/>
                         <outlet property="letterButton" destination="aZe-rf-Sdr" id="dNv-cZ-fZQ"/>
-                        <outlet property="newWord" destination="Kls-2e-ZYR" id="Leh-Nr-1AS"/>
-                        <outlet property="okBtn" destination="Ike-S5-DPd" id="0W5-ik-XX7"/>
                         <outlet property="wordHidden" destination="GuM-Vg-1ao" id="R4c-qN-NrL"/>
                         <outlet property="wordTitle" destination="dtd-tW-j5G" id="K4B-KK-E1V"/>
                         <segue destination="1AO-UN-vfA" kind="presentation" identifier="resultSegue2" modalPresentationStyle="overCurrentContext" id="upw-Ex-Cmh"/>
@@ -1010,7 +1029,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWn-ea-NAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441.5" y="894.75"/>
+            <point key="canvasLocation" x="1667" y="931"/>
         </scene>
     </scenes>
     <resources>
@@ -1022,7 +1041,7 @@
         <image name="new_player_button" width="96" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NMv-wu-jqX"/>
         <segue reference="upw-Ex-Cmh"/>
+        <segue reference="NMv-wu-jqX"/>
     </inferredMetricsTieBreakers>
 </document>

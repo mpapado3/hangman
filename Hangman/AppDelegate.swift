@@ -67,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // In that case, we skip tracking here to avoid double counting the app-open.
             
             let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
-            let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
+            let oldPushHandlerOnly = !self.respondsToSelector(#selector(UIApplicationDelegate.application(_:didReceiveRemoteNotification:fetchCompletionHandler:)))
             var noPushPayload = false;
             if let options = launchOptions {
                 noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;

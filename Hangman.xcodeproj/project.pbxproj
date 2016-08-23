@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB062C681D6CB77600B8E46C /* WordSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */; };
 		AB2420EA1BC10DF60060EC9E /* gamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2420E91BC10DF60060EC9E /* gamePlay.swift */; };
 		AB2B9E371D50FF830005BD4F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */; };
 		AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSelectionViewController.swift; sourceTree = "<group>"; };
 		AB2420E91BC10DF60060EC9E /* gamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gamePlay.swift; path = ../gamePlay.swift; sourceTree = "<group>"; };
 		AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -103,6 +105,7 @@
 				AB6B9C291BB08A5B000F7247 /* Info.plist */,
 				AB6B9C241BB08A5B000F7247 /* Assets.xcassets */,
 				AB44273B1D53D0D400F91D12 /* StartViewController.swift */,
+				AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -146,12 +149,13 @@
 		AB6B9C121BB08A5B000F7247 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Razzmatazz;
 				TargetAttributes = {
 					AB6B9C191BB08A5B000F7247 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 6V3YKG4BBP;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -201,6 +205,7 @@
 				ABD49E571D4FD6B100B42957 /* WinViewController.swift in Sources */,
 				ABB4F7301BC018D600A229E0 /* ThirdViewController.swift in Sources */,
 				AB6B9C1E1BB08A5B000F7247 /* AppDelegate.swift in Sources */,
+				AB062C681D6CB77600B8E46C /* WordSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +244,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -283,8 +290,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -303,6 +312,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -319,6 +329,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gr.razzmatazz.Hangman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -334,6 +345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gr.razzmatazz.Hangman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

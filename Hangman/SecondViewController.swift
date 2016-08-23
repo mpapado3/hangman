@@ -27,56 +27,16 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     var gameActive = true
     
     var lettersFound: Int = 0
-    
-    var hiddenArray = [String]()
-    
-    var wordToFind = [String]()
 
     @IBOutlet weak var letterButton: UIButton!
     
     @IBOutlet weak var wordHidden: UILabel!
     
-    @IBOutlet weak var newWord: UITextField!
-    
-    @IBOutlet weak var okBtn: UIButton!
-    
 
     @IBOutlet weak var hangerImage2: UIImageView!
     
     @IBOutlet weak var wordTitle: UILabel!
-    
-    @IBAction func okButton(sender: AnyObject) {
-        
-        let characters = Array(newWord.text!.characters)
-        
-        // print(characters)
-        
-        newWord.text = ""
-        
-        newWord.hidden = true
-        
-        okBtn.hidden = true
-        
-        wordTitle.hidden = true
-        
-        var i = 0
-        
-        for (i = 0; i<characters.count ; i++) {
-            
-                hiddenArray.append("_")
-                wordToFind.append(String(characters[i]))
 
-        }
-        
-        hiddenArray[0] = String(characters[0])
-        
-        hiddenArray[i-1] = String(characters.last)
-        
-        
-        
-        wordHidden.text = hiddenArray.joinWithSeparator(" ")
-        
-    }
     
     @IBAction func letterButtonPressed(sender: AnyObject) {
         
@@ -91,7 +51,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
             let disableMyButton = sender as? UIButton
             disableMyButton!.enabled = false
             
-            for (var i = 1;i<wordToFind.count - 1;i++) {
+            for i in 1..<wordToFind.count - 1 {
                 if wordToFind[i] == letters[sender.tag - 1] {
                     // print(letters[sender.tag - 1])
                     hiddenArray[i] = letters[sender.tag - 1]
@@ -182,6 +142,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        wordHidden.text = hiddenArray.joinWithSeparator(" ")
         
         // Do any additional setup after loading the view.
     }

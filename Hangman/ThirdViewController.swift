@@ -73,7 +73,7 @@ class ThirdViewController: UIViewController {
                 
                 var i = 0
                 
-                for (i = 0; i<characters.count ; i++) {
+                for (i = 0; i<characters.count ; i += 1) {
                     
                     hiddenArray.append("_")
                     wordToFind.append(String(characters[i]))
@@ -90,7 +90,7 @@ class ThirdViewController: UIViewController {
                 print((error))
             }
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ThirdViewController.timerUpdate), userInfo: nil, repeats: true)
             
         }
 
@@ -110,7 +110,7 @@ class ThirdViewController: UIViewController {
             
             wrongLetters += 1
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ThirdViewController.timerUpdate), userInfo: nil, repeats: true)
              
             print(wrongLetters)
             
@@ -153,7 +153,7 @@ class ThirdViewController: UIViewController {
         
         timer.invalidate()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerUpdate", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ThirdViewController.timerUpdate), userInfo: nil, repeats: true)
         
         var falseLetter: Bool = true
         
@@ -166,7 +166,7 @@ class ThirdViewController: UIViewController {
             let disableMyButton = sender as? UIButton
             disableMyButton!.enabled = false
             
-            for (var i = 1;i<wordToFind.count - 1;i++) {
+            for i in 1..<wordToFind.count - 1 {
                 if wordToFind[i] == letters[sender.tag - 1] {
                     hiddenArray[i] = letters[sender.tag - 1]
                     wordHidden.text = hiddenArray.joinWithSeparator(" ")
