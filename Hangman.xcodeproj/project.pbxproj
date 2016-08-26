@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB062C681D6CB77600B8E46C /* WordSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */; };
+		AB062C6A1D6E15E300B8E46C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062C691D6E15E300B8E46C /* SettingsViewController.swift */; };
 		AB2420EA1BC10DF60060EC9E /* gamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2420E91BC10DF60060EC9E /* gamePlay.swift */; };
 		AB2B9E371D50FF830005BD4F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */; };
 		AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */; };
@@ -16,21 +17,27 @@
 		AB4427381D53A5DE00F91D12 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4427371D53A5DE00F91D12 /* libstdc++.6.0.9.dylib */; };
 		AB44273A1D53A60600F91D12 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4427391D53A60600F91D12 /* libsqlite3.dylib */; };
 		AB44273C1D53D0D400F91D12 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB44273B1D53D0D400F91D12 /* StartViewController.swift */; };
+		AB47FC051D6FB06F00D678F5 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB47FC031D6FB06F00D678F5 /* ParseCrashReporting.framework */; };
+		AB47FC061D6FB06F00D678F5 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB47FC041D6FB06F00D678F5 /* ParseUI.framework */; };
+		AB47FC091D6FB5E400D678F5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB47FC071D6FB5E400D678F5 /* FBSDKCoreKit.framework */; };
+		AB47FC0A1D6FB5E400D678F5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB47FC081D6FB5E400D678F5 /* FBSDKLoginKit.framework */; };
 		AB6B9C1E1BB08A5B000F7247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B9C1D1BB08A5B000F7247 /* AppDelegate.swift */; };
 		AB6B9C201BB08A5B000F7247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6B9C1F1BB08A5B000F7247 /* ViewController.swift */; };
 		AB6B9C231BB08A5B000F7247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6B9C211BB08A5B000F7247 /* Main.storyboard */; };
 		AB6B9C251BB08A5B000F7247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6B9C241BB08A5B000F7247 /* Assets.xcassets */; };
 		AB6B9C281BB08A5B000F7247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6B9C261BB08A5B000F7247 /* LaunchScreen.storyboard */; };
 		ABA19AA81D40213F0043BB86 /* words.ini in Resources */ = {isa = PBXBuildFile; fileRef = ABA19AA71D40213F0043BB86 /* words.ini */; };
-		ABB4F7301BC018D600A229E0 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4F72F1BC018D600A229E0 /* ThirdViewController.swift */; };
+		ABB4F7301BC018D600A229E0 /* OnePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB4F72F1BC018D600A229E0 /* OnePlayerViewController.swift */; };
 		ABB4F7321BC0203900A229E0 /* hangman.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB4F7311BC0203900A229E0 /* hangman.png */; };
 		ABD49E571D4FD6B100B42957 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD49E561D4FD6B100B42957 /* WinViewController.swift */; };
-		ABFD676F1BB1EA1900411676 /* words-old.ini in Resources */ = {isa = PBXBuildFile; fileRef = ABFD676E1BB1EA1900411676 /* words-old.ini */; };
-		ABFD67931BB1F59B00411676 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD67921BB1F59B00411676 /* SecondViewController.swift */; };
+		ABE977961D6FA79D008F6BFD /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE977951D6FA79D008F6BFD /* ParseFacebookUtilsV4.framework */; };
+		ABFD676F1BB1EA1900411676 /* kidsWords.ini in Resources */ = {isa = PBXBuildFile; fileRef = ABFD676E1BB1EA1900411676 /* kidsWords.ini */; };
+		ABFD67931BB1F59B00411676 /* TwoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD67921BB1F59B00411676 /* TwoPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSelectionViewController.swift; sourceTree = "<group>"; };
+		AB062C691D6E15E300B8E46C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AB2420E91BC10DF60060EC9E /* gamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gamePlay.swift; path = ../gamePlay.swift; sourceTree = "<group>"; };
 		AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -39,6 +46,10 @@
 		AB4427371D53A5DE00F91D12 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "../../../../../usr/lib/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
 		AB4427391D53A60600F91D12 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		AB44273B1D53D0D400F91D12 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		AB47FC031D6FB06F00D678F5 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		AB47FC041D6FB06F00D678F5 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		AB47FC071D6FB5E400D678F5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		AB47FC081D6FB5E400D678F5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		AB6B9C1A1BB08A5B000F7247 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6B9C1D1BB08A5B000F7247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB6B9C1F1BB08A5B000F7247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,11 +58,13 @@
 		AB6B9C271BB08A5B000F7247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6B9C291BB08A5B000F7247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABA19AA71D40213F0043BB86 /* words.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.ini; sourceTree = "<group>"; };
-		ABB4F72F1BC018D600A229E0 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		ABB4F72F1BC018D600A229E0 /* OnePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePlayerViewController.swift; sourceTree = "<group>"; };
 		ABB4F7311BC0203900A229E0 /* hangman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hangman.png; path = ../../../../Desktop/hangman.png; sourceTree = "<group>"; };
 		ABD49E561D4FD6B100B42957 /* WinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
-		ABFD676E1BB1EA1900411676 /* words-old.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "words-old.ini"; sourceTree = "<group>"; };
-		ABFD67921BB1F59B00411676 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ABE977941D6FA0D5008F6BFD /* Hangman-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hangman-Bridging-Header.h"; sourceTree = "<group>"; };
+		ABE977951D6FA79D008F6BFD /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		ABFD676E1BB1EA1900411676 /* kidsWords.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kidsWords.ini; sourceTree = "<group>"; };
+		ABFD67921BB1F59B00411676 /* TwoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +72,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB44273A1D53A60600F91D12 /* libsqlite3.dylib in Frameworks */,
 				AB4427381D53A5DE00F91D12 /* libstdc++.6.0.9.dylib in Frameworks */,
-				AB2B9E3D1D50FFB40005BD4F /* Bolts.framework in Frameworks */,
-				AB2B9E3B1D50FFA70005BD4F /* Parse.framework in Frameworks */,
-				AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */,
 				AB2B9E371D50FF830005BD4F /* SystemConfiguration.framework in Frameworks */,
+				AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */,
+				AB44273A1D53A60600F91D12 /* libsqlite3.dylib in Frameworks */,
+				AB47FC061D6FB06F00D678F5 /* ParseUI.framework in Frameworks */,
+				AB47FC091D6FB5E400D678F5 /* FBSDKCoreKit.framework in Frameworks */,
+				AB47FC051D6FB06F00D678F5 /* ParseCrashReporting.framework in Frameworks */,
+				AB47FC0A1D6FB5E400D678F5 /* FBSDKLoginKit.framework in Frameworks */,
+				AB2B9E3B1D50FFA70005BD4F /* Parse.framework in Frameworks */,
+				AB2B9E3D1D50FFB40005BD4F /* Bolts.framework in Frameworks */,
+				ABE977961D6FA79D008F6BFD /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,12 +111,12 @@
 			children = (
 				ABB4F7311BC0203900A229E0 /* hangman.png */,
 				ABA19AA71D40213F0043BB86 /* words.ini */,
-				ABFD676E1BB1EA1900411676 /* words-old.ini */,
+				ABFD676E1BB1EA1900411676 /* kidsWords.ini */,
 				AB2420E91BC10DF60060EC9E /* gamePlay.swift */,
 				AB6B9C1D1BB08A5B000F7247 /* AppDelegate.swift */,
 				AB6B9C1F1BB08A5B000F7247 /* ViewController.swift */,
-				ABFD67921BB1F59B00411676 /* SecondViewController.swift */,
-				ABB4F72F1BC018D600A229E0 /* ThirdViewController.swift */,
+				ABFD67921BB1F59B00411676 /* TwoPlayerViewController.swift */,
+				ABB4F72F1BC018D600A229E0 /* OnePlayerViewController.swift */,
 				ABD49E561D4FD6B100B42957 /* WinViewController.swift */,
 				AB6B9C211BB08A5B000F7247 /* Main.storyboard */,
 				AB6B9C261BB08A5B000F7247 /* LaunchScreen.storyboard */,
@@ -106,6 +124,8 @@
 				AB6B9C241BB08A5B000F7247 /* Assets.xcassets */,
 				AB44273B1D53D0D400F91D12 /* StartViewController.swift */,
 				AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */,
+				AB062C691D6E15E300B8E46C /* SettingsViewController.swift */,
+				ABE977941D6FA0D5008F6BFD /* Hangman-Bridging-Header.h */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -115,6 +135,11 @@
 			children = (
 				AB4427391D53A60600F91D12 /* libsqlite3.dylib */,
 				AB4427371D53A5DE00F91D12 /* libstdc++.6.0.9.dylib */,
+				AB47FC071D6FB5E400D678F5 /* FBSDKCoreKit.framework */,
+				AB47FC081D6FB5E400D678F5 /* FBSDKLoginKit.framework */,
+				ABE977951D6FA79D008F6BFD /* ParseFacebookUtilsV4.framework */,
+				AB47FC031D6FB06F00D678F5 /* ParseCrashReporting.framework */,
+				AB47FC041D6FB06F00D678F5 /* ParseUI.framework */,
 				AB2B9E3C1D50FFB40005BD4F /* Bolts.framework */,
 				AB2B9E3A1D50FFA70005BD4F /* Parse.framework */,
 				AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */,
@@ -186,7 +211,7 @@
 				AB6B9C251BB08A5B000F7247 /* Assets.xcassets in Resources */,
 				ABB4F7321BC0203900A229E0 /* hangman.png in Resources */,
 				ABA19AA81D40213F0043BB86 /* words.ini in Resources */,
-				ABFD676F1BB1EA1900411676 /* words-old.ini in Resources */,
+				ABFD676F1BB1EA1900411676 /* kidsWords.ini in Resources */,
 				AB6B9C231BB08A5B000F7247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,12 +225,13 @@
 			files = (
 				AB2420EA1BC10DF60060EC9E /* gamePlay.swift in Sources */,
 				AB44273C1D53D0D400F91D12 /* StartViewController.swift in Sources */,
-				ABFD67931BB1F59B00411676 /* SecondViewController.swift in Sources */,
+				ABFD67931BB1F59B00411676 /* TwoPlayerViewController.swift in Sources */,
 				AB6B9C201BB08A5B000F7247 /* ViewController.swift in Sources */,
 				ABD49E571D4FD6B100B42957 /* WinViewController.swift in Sources */,
-				ABB4F7301BC018D600A229E0 /* ThirdViewController.swift in Sources */,
+				ABB4F7301BC018D600A229E0 /* OnePlayerViewController.swift in Sources */,
 				AB6B9C1E1BB08A5B000F7247 /* AppDelegate.swift in Sources */,
 				AB062C681D6CB77600B8E46C /* WordSelectionViewController.swift in Sources */,
+				AB062C6A1D6E15E300B8E46C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +299,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Hangman/Hangman-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -312,6 +339,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Hangman/Hangman-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

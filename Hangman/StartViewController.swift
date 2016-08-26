@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
 
 class StartViewController: UIViewController {
     
@@ -24,7 +25,25 @@ class StartViewController: UIViewController {
     
     var registerUser: Bool = true
     
-    
+    @IBAction func facebookConnect(sender: AnyObject) {
+        
+        /*
+        let permissions = ["public_profile"]
+        
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions, block: {(user: PFUser?, error: NSError?) -> Void in
+            
+            if let error = error {
+                print(error)
+            } else {
+                if let user = user {
+                    print(user)
+                }
+            }
+            
+        })
+       */
+        
+    }
     @IBAction func newPlayerButton(sender: AnyObject) {
         
         newPlayerButtonOutlet.hidden = true
@@ -74,6 +93,7 @@ class StartViewController: UIViewController {
                 var errorMessage = "Please try again Later!"
                 
                 let user = PFUser()
+                user.email = String(emailField.text!)
                 user.username = String(emailField.text!)
                 user.password = String(passwordField.text!)
                 
@@ -148,6 +168,19 @@ class StartViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        if let username = PFUser.currentUser()?.username {
+            
+            self.performSegueWithIdentifier("startSegue", sender: self)
+            
+            
+        }
+        
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

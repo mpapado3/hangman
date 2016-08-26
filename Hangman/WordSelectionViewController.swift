@@ -26,7 +26,7 @@ class WordSelectionViewController: UIViewController {
         
         var i = 0
         
-        for i in 0..<characters.count {
+        for (i=0; i<characters.count; i+=1) {
             
             hiddenArray.append("_")
             wordToFind.append(String(characters[i]))
@@ -47,6 +47,13 @@ class WordSelectionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
