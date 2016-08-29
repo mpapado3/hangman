@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 var label: String!
 
@@ -58,7 +59,7 @@ class OnePlayerViewController: UIViewController {
                 
                 var characters = Array(activeWord.characters)
                 
-                print("word: \(activeWord) Letters: \(characters.count)")
+                print("asldkeu " + "word: \(activeWord) Letters: \(characters.count)")
                 
                 while characters.count > 12 {
                     
@@ -68,7 +69,7 @@ class OnePlayerViewController: UIViewController {
                 
                     characters = Array(activeWord.characters)
                     
-                    print("word: \(activeWord) Letters: \(characters.count)")
+                    print("asldkeu " + "word: \(activeWord) Letters: \(characters.count)")
                     
                 }
                 
@@ -107,7 +108,7 @@ class OnePlayerViewController: UIViewController {
                     
                     var characters = Array(activeWord.characters)
                     
-                    print("word: \(activeWord) Letters: \(characters.count)")
+                    print("asldkeu " + "word: \(activeWord) Letters: \(characters.count)")
                     
                     while characters.count > 12 {
                         
@@ -117,7 +118,7 @@ class OnePlayerViewController: UIViewController {
                         
                         characters = Array(activeWord.characters)
                         
-                        print("word: \(activeWord) Letters: \(characters.count)")
+                        print("asldkeu " + "word: \(activeWord) Letters: \(characters.count)")
                         
                     }
                     
@@ -261,9 +262,29 @@ class OnePlayerViewController: UIViewController {
                 
                 timer.invalidate()
                 
-                print("You Won")
+                print("asldkeu " + "You Won")
                 
                 label = "ΜΠΡΑΒΟ ΚΕΡΔΙΣΕΣ!"
+                
+                var gamesWon: Int = 0
+                
+                if let games = PFUser.currentUser()?["gamesWon"]! {
+                print("asldkeu \(games as! Int)")
+                
+                gamesWon = (games as! Int) + 1
+                    print("asldkeu \(gamesWon)")
+                }
+                
+                
+                PFUser.currentUser()?["gamesWon"] = gamesWon
+
+                do {
+                    try PFUser.currentUser()!.save()
+                } catch {
+                    print("asldkeu \(error)")
+                }
+                
+                print("asldkeu \(PFUser.currentUser()!["username"])")
                 
                 performSegueWithIdentifier("resultSegue", sender: nil)
                 

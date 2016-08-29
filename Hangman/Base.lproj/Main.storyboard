@@ -104,9 +104,11 @@
                                     <action selector="acceptButton:" destination="pJz-7X-XFW" eventType="touchUpInside" id="cD5-hL-ahc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd7-SE-9HD">
-                                <frame key="frameInset" minX="77" minY="262" height="10.86%" maxX="78"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd7-SE-9HD" userLabel="Facebook Button">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="U0e-NV-sMA"/>
+                                    <constraint firstAttribute="width" constant="218" id="dhB-9X-vgS"/>
+                                </constraints>
                                 <state key="normal" image="facebook_connect"/>
                                 <connections>
                                     <action selector="facebookConnect:" destination="pJz-7X-XFW" eventType="touchUpInside" id="Wec-jn-3r1"/>
@@ -121,12 +123,14 @@
                             <constraint firstAttribute="trailing" secondItem="Prc-80-d2t" secondAttribute="trailing" constant="35" id="6Kd-tX-4wE"/>
                             <constraint firstAttribute="trailing" secondItem="Com-B1-SGt" secondAttribute="trailing" id="8Tu-cL-izZ"/>
                             <constraint firstAttribute="trailing" secondItem="zcM-xt-FsT" secondAttribute="trailing" constant="41" id="8gE-ZN-63p"/>
+                            <constraint firstItem="Yd7-SE-9HD" firstAttribute="centerX" secondItem="m6C-pT-JMo" secondAttribute="centerX" id="Bpb-nC-Pbt"/>
                             <constraint firstItem="Com-B1-SGt" firstAttribute="leading" secondItem="m6C-pT-JMo" secondAttribute="leading" id="CLZ-pM-AXe"/>
                             <constraint firstAttribute="trailing" secondItem="YKY-vD-DpD" secondAttribute="trailing" constant="20" id="DrM-uX-uyX"/>
                             <constraint firstAttribute="bottom" secondItem="Td4-1B-HSd" secondAttribute="bottom" constant="250" id="L72-OT-9ts"/>
                             <constraint firstItem="zcM-xt-FsT" firstAttribute="leading" secondItem="YKY-vD-DpD" secondAttribute="leading" constant="110" id="M4M-0K-hOu"/>
                             <constraint firstItem="da0-SC-Lh4" firstAttribute="top" secondItem="YKY-vD-DpD" secondAttribute="top" constant="42" id="TIz-YO-zoe"/>
                             <constraint firstAttribute="bottom" secondItem="Com-B1-SGt" secondAttribute="bottom" id="Vnn-DO-61V"/>
+                            <constraint firstItem="RCY-vW-Ijk" firstAttribute="top" secondItem="Yd7-SE-9HD" secondAttribute="bottom" constant="32" id="WPQ-G3-9Hn"/>
                             <constraint firstItem="zcM-xt-FsT" firstAttribute="top" secondItem="YKY-vD-DpD" secondAttribute="top" constant="83" id="WhB-5s-4Tn"/>
                             <constraint firstAttribute="trailing" secondItem="gk4-FN-n0L" secondAttribute="trailing" constant="41" id="hrv-y2-uP3"/>
                             <constraint firstItem="Td4-1B-HSd" firstAttribute="leading" secondItem="m6C-pT-JMo" secondAttribute="leading" constant="35" id="i6y-zS-V7B"/>
@@ -161,8 +165,6 @@
                                 <include reference="8Tu-cL-izZ"/>
                                 <include reference="CLZ-pM-AXe"/>
                                 <include reference="Vnn-DO-61V"/>
-                                <include reference="4op-KG-pwz"/>
-                                <include reference="6Kd-tX-4wE"/>
                                 <include reference="L72-OT-9ts"/>
                                 <include reference="i6y-zS-V7B"/>
                                 <include reference="1ZV-tD-wCx"/>
@@ -174,6 +176,8 @@
                                 <include reference="8gE-ZN-63p"/>
                                 <include reference="M4M-0K-hOu"/>
                                 <include reference="WhB-5s-4Tn"/>
+                                <include reference="4op-KG-pwz"/>
+                                <include reference="6Kd-tX-4wE"/>
                                 <include reference="hrv-y2-uP3"/>
                                 <include reference="iju-dB-OSp"/>
                             </mask>
@@ -193,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAV-9d-q2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-650" y="421"/>
+            <point key="canvasLocation" x="-652.17391304347836" y="419.02173913043481"/>
         </scene>
         <!--MainViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -209,8 +213,8 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-Qp-U1D"/>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kql-wS-pwb">
-                                <frame key="frameInset" minX="87" minY="250" width="201" height="247"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <frame key="frameInset" minX="59" minY="174" width="201" height="247"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-3m-arX">
                                         <frame key="frameInset" minX="3" width="196" height="69"/>
@@ -297,8 +301,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69z-TS-bZS">
-                                <frame key="frameInset" minX="43" minY="575" width="285" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <frame key="frameInset" minX="43" minY="575" maxX="47" maxY="23"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                 <state key="normal" title="Αποσύνδεση">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -308,8 +312,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-6Y-VUf">
-                                <frame key="frameInset" minX="43" minY="498" width="285" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <frame key="frameInset" minX="43" minY="498" maxX="47" maxY="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                 <state key="normal" title="Επιστροφή">
                                     <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -319,15 +323,15 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyK-IK-qNF">
-                                <frame key="frameInset" minY="446" width="51" height="31" maxX="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <frame key="frameInset" minX="288" minY="446" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <connections>
                                     <action selector="kidsModeSwitchAction:" destination="7xx-ga-wIr" eventType="valueChanged" id="6cz-hG-8wB"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kids Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-lS-mfP">
-                                <frame key="frameInset" minX="32" minY="439" width="63.56%" height="19.30%"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <frame key="frameInset" minX="32" minY="439" maxX="125" maxY="184"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

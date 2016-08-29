@@ -9,6 +9,9 @@
 import UIKit
 import Parse
 import Bolts
+import FBSDKLoginKit
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 
 @UIApplicationMain
@@ -28,15 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.enableLocalDatastore()
         
-        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
-        
         
         let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
-            ParseMutableClientConfiguration.applicationId = "kremala020816780105Gcw"
-            ParseMutableClientConfiguration.clientKey = "hangman29Iu74rd4Y"
-            ParseMutableClientConfiguration.server = "https://kremala.herokuapp.com/parse"
+            ParseMutableClientConfiguration.applicationId = "hangman2j7sofjw9wjnr9"
+            ParseMutableClientConfiguration.clientKey = "jasd834bq20923nvlas723k"
+            ParseMutableClientConfiguration.server = "https://hangman2.herokuapp.com/parse"
         })
         
+        
+        
+
         /*
          let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
          ParseMutableClientConfiguration.applicationId = "parseaio"
@@ -107,6 +111,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //            let types: UIRemoteNotificationType = [.Alert, .Badge, .Sound]
         //            application.registerForRemoteNotificationTypes(types)
         //        }
+
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
@@ -153,7 +159,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //     }
     // }
     
-
+    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
@@ -161,7 +167,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidBecomeActive(application: UIApplication) {
         FBSDKAppEvents.activateApp()
     }
-
+    
     /*
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

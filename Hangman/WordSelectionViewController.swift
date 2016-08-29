@@ -14,6 +14,7 @@ var wordToFind = [String]()
 
 class WordSelectionViewController: UIViewController {
     
+    
     @IBOutlet weak var newWord: UITextField!
     
     @IBAction func okButton(sender: AnyObject) {
@@ -53,7 +54,24 @@ class WordSelectionViewController: UIViewController {
         self.view.endEditing(true)
         
     }
-
+    
+    /*
+    func adjustInsetForKeyboardShow(show: Bool, notification: NSNotification) {
+        guard let value = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
+        let keyboardFrame = value.CGRectValue()
+        let adjustmentHeight = (CGRectGetHeight(keyboardFrame) + 10) * (show ? 1 : -1)
+        addBookScrollView.contentInset.bottom += adjustmentHeight
+        addBookScrollView.scrollIndicatorInsets.bottom += adjustmentHeight
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        adjustInsetForKeyboardShow(true, notification: notification)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        adjustInsetForKeyboardShow(false, notification: notification)
+    }
+    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

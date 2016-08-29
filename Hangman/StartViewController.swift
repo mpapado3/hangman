@@ -9,6 +9,9 @@
 import UIKit
 import Parse
 import FBSDKCoreKit
+import FBSDKLoginKit
+import ParseFacebookUtilsV4
+
 
 class StartViewController: UIViewController {
     
@@ -27,21 +30,34 @@ class StartViewController: UIViewController {
     
     @IBAction func facebookConnect(sender: AnyObject) {
         
-        /*
-        let permissions = ["public_profile"]
         
+        let permissions = ["public_profile"]
+        /*
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions, block: {(user: PFUser?, error: NSError?) -> Void in
             
             if let error = error {
-                print(error)
+                print("asldkue \(error)")
             } else {
                 if let user = user {
-                    print(user)
+                    print("asldkue \(user)")
                 }
             }
             
         })
-       */
+ */
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    print("asldkeu User signed up and logged in through Facebook!")
+                } else {
+                    print("asldkeu User logged in through Facebook!")
+                }
+            } else {
+                print("asldkeu Uh oh. The user cancelled the Facebook login.")
+            }
+        }
+       
         
     }
     @IBAction func newPlayerButton(sender: AnyObject) {
@@ -180,6 +196,15 @@ class StartViewController: UIViewController {
         
         
     }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+
     
 
     override func didReceiveMemoryWarning() {
