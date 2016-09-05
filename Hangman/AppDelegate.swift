@@ -31,13 +31,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.enableLocalDatastore()
         
-        
+        /*
         let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
             ParseMutableClientConfiguration.applicationId = "hangman2j7sofjw9wjnr9"
             ParseMutableClientConfiguration.clientKey = "jasd834bq20923nvlas723k"
             ParseMutableClientConfiguration.server = "https://hangman2.herokuapp.com/parse"
         })
+        */
         
+        let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
+            ParseMutableClientConfiguration.applicationId = "kremala020816780105Gcw"
+            ParseMutableClientConfiguration.clientKey = "hangman29Iu74rd4Y"
+            ParseMutableClientConfiguration.server = "https://kremala.herokuapp.com/parse"
+        })
         
         
 
@@ -114,6 +120,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
+        if let user = PFUser.currentUser()!["username"] {
+            
+            print("asldkeu \(user)")
+            // Code to execute if user is logged in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController")
+            
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+            
+        } else {
+            // Default screen you set in info plist.
+        }
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
@@ -123,8 +143,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let installation = PFInstallation.currentInstallation()
-        installation.setDeviceTokenFromData(deviceToken)
-        installation.saveInBackground()
+        installation!.setDeviceTokenFromData(deviceToken)
+        installation!.saveInBackground()
         
         PFPush.subscribeToChannelInBackground("") { (succeeded: Bool, error: NSError?) in
             if succeeded {

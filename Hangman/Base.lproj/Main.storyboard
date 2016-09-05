@@ -9,13 +9,13 @@
         <!--StartViewController-->
         <scene sceneID="hck-oU-fyM">
             <objects>
-                <viewController title="StartViewController" id="pJz-7X-XFW" customClass="StartViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartViewController" title="StartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pJz-7X-XFW" customClass="StartViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LOP-aF-HTD"/>
                         <viewControllerLayoutGuide type="bottom" id="RCY-vW-Ijk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m6C-pT-JMo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Com-B1-SGt"/>
@@ -165,6 +165,8 @@
                                 <include reference="8Tu-cL-izZ"/>
                                 <include reference="CLZ-pM-AXe"/>
                                 <include reference="Vnn-DO-61V"/>
+                                <include reference="4op-KG-pwz"/>
+                                <include reference="6Kd-tX-4wE"/>
                                 <include reference="L72-OT-9ts"/>
                                 <include reference="i6y-zS-V7B"/>
                                 <include reference="1ZV-tD-wCx"/>
@@ -176,8 +178,6 @@
                                 <include reference="8gE-ZN-63p"/>
                                 <include reference="M4M-0K-hOu"/>
                                 <include reference="WhB-5s-4Tn"/>
-                                <include reference="4op-KG-pwz"/>
-                                <include reference="6Kd-tX-4wE"/>
                                 <include reference="hrv-y2-uP3"/>
                                 <include reference="iju-dB-OSp"/>
                             </mask>
@@ -202,18 +202,18 @@
         <!--MainViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" title="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-Qp-U1D"/>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kql-wS-pwb">
-                                <frame key="frameInset" minX="59" minY="174" width="201" height="247"/>
+                                <frame key="frameInset" minX="58" minY="174" width="201" height="247"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-3m-arX">
@@ -293,59 +293,68 @@
                         <viewControllerLayoutGuide type="bottom" id="NLy-BD-7eB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EiQ-1L-TRj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hdn-kr-Z2U">
-                                <frame key="frameInset"/>
+                                <frame key="frameInset" minX="-1" maxX="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69z-TS-bZS">
-                                <frame key="frameInset" minX="43" minY="575" maxX="47" maxY="23"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
-                                <state key="normal" title="Αποσύνδεση">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pJz-7X-XFW" kind="show" identifier="disconnectSegue" id="RJT-uW-RkF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-6Y-VUf">
-                                <frame key="frameInset" minX="43" minY="498" maxX="47" maxY="100"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
-                                <state key="normal" title="Επιστροφή">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="WS7-5m-grM"/>
-                                </connections>
-                            </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyK-IK-qNF">
-                                <frame key="frameInset" minX="288" minY="446" width="51" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FkS-dJ-kdj">
+                                <frame key="frameInset" minX="27" minY="302" width="265" height="219"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <connections>
-                                    <action selector="kidsModeSwitchAction:" destination="7xx-ga-wIr" eventType="valueChanged" id="6cz-hG-8wB"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kids Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-lS-mfP">
-                                <frame key="frameInset" minX="32" minY="439" maxX="125" maxY="184"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fGZ-fl-OQ4">
+                                        <frame key="frameInset" width="265" height="57"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Kids Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-lS-mfP">
+                                                <frame key="frameInset" width="186" height="57"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyK-IK-qNF">
+                                                <frame key="frameInset" minX="216" minY="13" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="kidsModeSwitchAction:" destination="7xx-ga-wIr" eventType="valueChanged" id="6cz-hG-8wB"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69z-TS-bZS">
+                                        <frame key="frameInset" minX="9" minY="69" width="248" height="69"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                        <state key="normal" title="Αποσύνδεση">
+                                            <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pJz-7X-XFW" kind="show" identifier="disconnectSegue" id="RJT-uW-RkF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-6Y-VUf">
+                                        <frame key="frameInset" minX="27" minY="150" width="211" height="69"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                        <state key="normal" title="Επιστροφή">
+                                            <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="WS7-5m-grM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="kidsModeSwitch" destination="IyK-IK-qNF" id="U1o-In-MtH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8y-Kz-anF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="-456.52173913043481"/>
+            <point key="canvasLocation" x="1250.625" y="-457.3943661971831"/>
         </scene>
         <!--OnePlayerViewController-->
         <scene sceneID="saf-ne-tkd">
@@ -356,15 +365,15 @@
                         <viewControllerLayoutGuide type="bottom" id="cyv-yj-3aF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ifs-aj-Fhx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-e9-npr">
-                                <frame key="frameInset"/>
+                                <frame key="frameInset" maxY="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-xG-YKa">
-                                <frame key="frameInset" minY="86" width="59.47%" height="51.81%"/>
+                                <frame key="frameInset" minY="85" width="59.06%" height="51.97%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-GD-GpT">
@@ -373,7 +382,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-Am-kGb">
-                                <frame key="frameInset" minY="65" width="14.33%" height="11.30%" maxX="40"/>
+                                <frame key="frameInset" minY="65" width="13.78%" height="9.54%" maxX="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="38"/>
@@ -680,7 +689,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5Av-Y6-pbg"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="kgd-wG-ZAH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ra4-IH-5x4">
@@ -750,47 +759,117 @@
                         <viewControllerLayoutGuide type="bottom" id="sjM-Ye-Vcx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Np-Nw-WLD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-lI-Yak">
-                                <frame key="frameInset"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Δώσε την λέξη που θέλεις!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-tW-j5G">
-                                <frame key="frameInset" minX="20" height="6.05%" maxX="20" maxY="221"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-2e-ZYR">
-                                <frame key="frameInset" minX="19" height="30" maxX="19" maxY="157"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ike-S5-DPd">
-                                <frame key="frameInset" minX="145" height="6.38%" maxX="145" maxY="87"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                <state key="normal" title="OK!">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="okButton:" destination="58g-yk-pWT" eventType="touchUpInside" id="03C-Po-mXr"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oq-Fo-AUm">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-lI-Yak"/>
+                                    <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJg-cB-5Ub">
+                                        <state key="normal" title="OK!">
+                                            <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okButton:" destination="58g-yk-pWT" eventType="touchUpInside" id="4Di-Vk-jCp"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCM-IJ-BN7">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="yes"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Δώσε την λέξη που θέλεις!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dtd-tW-j5G">
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dtd-tW-j5G" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="0pW-DN-IQ5"/>
+                                    <constraint firstItem="FCM-IJ-BN7" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="3cU-81-UEr"/>
+                                    <constraint firstItem="dtd-tW-j5G" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="4qx-8D-Aly"/>
+                                    <constraint firstAttribute="trailing" secondItem="FCM-IJ-BN7" secondAttribute="trailing" constant="8" id="5Qg-2h-fve"/>
+                                    <constraint firstAttribute="trailing" secondItem="dtd-tW-j5G" secondAttribute="trailing" constant="8" id="5Qv-hb-VKg"/>
+                                    <constraint firstItem="FCM-IJ-BN7" firstAttribute="top" secondItem="dtd-tW-j5G" secondAttribute="bottom" constant="31" id="5z9-sv-PMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="bJg-cB-5Ub" secondAttribute="bottom" constant="8" id="ACd-z7-Hy4"/>
+                                    <constraint firstItem="bJg-cB-5Ub" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="DyQ-hG-W15"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cqb-lI-Yak" secondAttribute="bottom" id="Fa8-6m-Mbu"/>
+                                    <constraint firstItem="FCM-IJ-BN7" firstAttribute="leading" secondItem="5Oq-Fo-AUm" secondAttribute="leading" constant="8" id="Gpd-mb-zLx"/>
+                                    <constraint firstItem="bJg-cB-5Ub" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="HdL-r4-Aji"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cqb-lI-Yak" secondAttribute="trailing" id="ILz-rG-Pnr"/>
+                                    <constraint firstItem="FCM-IJ-BN7" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="ITX-bw-VbE"/>
+                                    <constraint firstItem="Cqb-lI-Yak" firstAttribute="leading" secondItem="5Oq-Fo-AUm" secondAttribute="leading" id="Rnw-u0-l7g"/>
+                                    <constraint firstItem="bJg-cB-5Ub" firstAttribute="top" secondItem="FCM-IJ-BN7" secondAttribute="bottom" constant="8" id="Uie-bM-eGx"/>
+                                    <constraint firstAttribute="trailing" secondItem="FCM-IJ-BN7" secondAttribute="trailing" constant="147" id="XHv-3h-Lcy"/>
+                                    <constraint firstItem="dtd-tW-j5G" firstAttribute="centerX" secondItem="5Oq-Fo-AUm" secondAttribute="centerX" id="aST-Ij-aDQ"/>
+                                    <constraint firstItem="bJg-cB-5Ub" firstAttribute="top" secondItem="FCM-IJ-BN7" secondAttribute="bottom" constant="8" id="c7z-aq-oBi"/>
+                                    <constraint firstItem="dtd-tW-j5G" firstAttribute="leading" secondItem="5Oq-Fo-AUm" secondAttribute="leading" constant="8" id="cn1-3h-yzF"/>
+                                    <constraint firstItem="FCM-IJ-BN7" firstAttribute="leading" secondItem="5Oq-Fo-AUm" secondAttribute="leading" constant="148" id="dPM-6K-nWO"/>
+                                    <constraint firstItem="Cqb-lI-Yak" firstAttribute="width" secondItem="5Oq-Fo-AUm" secondAttribute="width" id="dSo-kn-cBM"/>
+                                    <constraint firstAttribute="trailing" secondItem="dtd-tW-j5G" secondAttribute="trailing" constant="8" id="e1A-Cf-NCQ"/>
+                                    <constraint firstItem="Cqb-lI-Yak" firstAttribute="top" secondItem="5Oq-Fo-AUm" secondAttribute="top" id="ez8-eE-aos"/>
+                                    <constraint firstItem="FCM-IJ-BN7" firstAttribute="top" secondItem="dtd-tW-j5G" secondAttribute="bottom" constant="18" id="jVg-ni-DCj"/>
+                                    <constraint firstAttribute="bottom" secondItem="bJg-cB-5Ub" secondAttribute="bottom" constant="23" id="o77-Da-tGt"/>
+                                    <constraint firstItem="dtd-tW-j5G" firstAttribute="leading" secondItem="5Oq-Fo-AUm" secondAttribute="leading" constant="8" id="rPt-j8-USE"/>
+                                    <constraint firstItem="Cqb-lI-Yak" firstAttribute="height" secondItem="5Oq-Fo-AUm" secondAttribute="height" id="tRz-Xk-Sbl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0pW-DN-IQ5"/>
+                                        <exclude reference="5Qv-hb-VKg"/>
+                                        <exclude reference="rPt-j8-USE"/>
+                                        <exclude reference="5Qg-2h-fve"/>
+                                        <exclude reference="5z9-sv-PMf"/>
+                                        <exclude reference="Gpd-mb-zLx"/>
+                                        <exclude reference="ITX-bw-VbE"/>
+                                        <exclude reference="XHv-3h-Lcy"/>
+                                        <exclude reference="dPM-6K-nWO"/>
+                                        <exclude reference="HdL-r4-Aji"/>
+                                        <exclude reference="Uie-bM-eGx"/>
+                                        <exclude reference="o77-Da-tGt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5Qv-hb-VKg"/>
+                                        <include reference="rPt-j8-USE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0pW-DN-IQ5"/>
+                                        <include reference="5Qg-2h-fve"/>
+                                        <include reference="5z9-sv-PMf"/>
+                                        <include reference="Gpd-mb-zLx"/>
+                                        <include reference="ITX-bw-VbE"/>
+                                        <include reference="XHv-3h-Lcy"/>
+                                        <include reference="dPM-6K-nWO"/>
+                                        <include reference="HdL-r4-Aji"/>
+                                        <include reference="Uie-bM-eGx"/>
+                                        <include reference="o77-Da-tGt"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Oq-Fo-AUm" secondAttribute="trailing" id="FCi-5o-aP0"/>
+                            <constraint firstItem="sjM-Ye-Vcx" firstAttribute="top" secondItem="5Oq-Fo-AUm" secondAttribute="bottom" id="Id4-BY-HLM"/>
+                            <constraint firstItem="5Oq-Fo-AUm" firstAttribute="top" secondItem="3Np-Nw-WLD" secondAttribute="top" id="VLe-DE-YqO"/>
+                            <constraint firstItem="5Oq-Fo-AUm" firstAttribute="leading" secondItem="3Np-Nw-WLD" secondAttribute="leading" id="hed-0a-Hpx"/>
+                            <constraint firstItem="5Oq-Fo-AUm" firstAttribute="width" secondItem="3Np-Nw-WLD" secondAttribute="width" id="sht-0B-gPB"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="newWord" destination="Kls-2e-ZYR" id="r0F-hg-81q"/>
+                        <outlet property="newWord" destination="FCM-IJ-BN7" id="3LQ-xw-01E"/>
+                        <outlet property="scrollView" destination="5Oq-Fo-AUm" id="Fo0-YB-V0x"/>
                         <segue destination="YCi-N3-JBd" kind="show" identifier="2PlayerSegue" id="cCO-PO-jC7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf7-Im-5Zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="1082"/>
+            <point key="canvasLocation" x="859.4202898550725" y="1078.5326086956522"/>
         </scene>
         <!--TwoPlayerViewController-->
         <scene sceneID="TAN-mk-HsO">
@@ -801,12 +880,12 @@
                         <viewControllerLayoutGuide type="bottom" id="cE5-9T-Nke"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FNB-dx-ulz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="c47-LZ-Bgr">
-                                <frame key="frameInset" minY="86" width="59.47%" height="51.81%"/>
+                                <frame key="frameInset" minY="86" width="50.00%" height="42.95%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="B6P-3t-rCW">
@@ -1042,7 +1121,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-Vg-1ao">
-                                <frame key="frameInset" minX="21" minY="387" height="7.50%" maxX="21"/>
+                                <frame key="frameInset" minX="21" minY="386" height="9.34%" maxX="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1096,7 +1175,7 @@
         <image name="new_player_button" width="96" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WS7-5m-grM"/>
-        <segue reference="udK-n0-XqL"/>
+        <segue reference="Jxd-SE-D7n"/>
+        <segue reference="upw-Ex-Cmh"/>
     </inferredMetricsTieBreakers>
 </document>

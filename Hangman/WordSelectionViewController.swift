@@ -12,10 +12,40 @@ var hiddenArray = [String]()
 
 var wordToFind = [String]()
 
-class WordSelectionViewController: UIViewController {
+class WordSelectionViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var newWord: UITextField!
+    
+    // functions to scroll the view for the keyboard
+    func adjustInsetForKeyboardShow(show: Bool, notification: NSNotification) {
+        guard let value = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
+        let keyboardFrame = value.CGRectValue()
+        let adjustmentHeight = (CGRectGetHeight(keyboardFrame) + 15) * (show ? 1 : -1)
+        scrollView.contentInset.bottom += adjustmentHeight
+        scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        adjustInsetForKeyboardShow(true, notification: notification)
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        adjustInsetForKeyboardShow(false, notification: notification)
+    }
+
+    // function to hide keyboard when press return key
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    // function to hide keyboard when touch outside of keyboard
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
     
     @IBAction func okButton(sender: AnyObject) {
         
@@ -45,40 +75,32 @@ class WordSelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(WordSelectionViewController.keyboardWillShow(_:)),
+            name: UIKeyboardWillShowNotification,
+            object: nil
+        )
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(WordSelectionViewController.keyboardWillHide(_:)),
+            name: UIKeyboardWillHideNotification,
+            object: nil
+        )
+        
+       self.newWord.delegate = self
+        
+
 
         // Do any additional setup after loading the view.
     }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-        self.view.endEditing(true)
-        
-    }
-    
-    /*
-    func adjustInsetForKeyboardShow(show: Bool, notification: NSNotification) {
-        guard let value = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else { return }
-        let keyboardFrame = value.CGRectValue()
-        let adjustmentHeight = (CGRectGetHeight(keyboardFrame) + 10) * (show ? 1 : -1)
-        addBookScrollView.contentInset.bottom += adjustmentHeight
-        addBookScrollView.scrollIndicatorInsets.bottom += adjustmentHeight
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        adjustInsetForKeyboardShow(true, notification: notification)
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        adjustInsetForKeyboardShow(false, notification: notification)
-    }
-    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

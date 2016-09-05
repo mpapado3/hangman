@@ -32,7 +32,7 @@ class StartViewController: UIViewController {
         
         
         let permissions = ["public_profile"]
-        /*
+        
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions, block: {(user: PFUser?, error: NSError?) -> Void in
             
             if let error = error {
@@ -44,7 +44,7 @@ class StartViewController: UIViewController {
             }
             
         })
- */
+        /*
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
             (user: PFUser?, error: NSError?) -> Void in
             if let user = user {
@@ -57,7 +57,7 @@ class StartViewController: UIViewController {
                 print("asldkeu Uh oh. The user cancelled the Facebook login.")
             }
         }
-       
+        */
         
     }
     @IBAction func newPlayerButton(sender: AnyObject) {
@@ -177,24 +177,33 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+        var currentUser = PFUser.currentUser()!["username"]
+        
+        print("asldkeu \(currentUser)")
+        
+        if currentUser != nil {
+            
+            // self.performSegueWithIdentifier("startSegue", sender: self)
+            
+            if let resultViewController = storyboard?.instantiateViewControllerWithIdentifier("MainViewController") {
+                presentViewController(resultViewController, animated: true, completion: nil)
+            }
+            
+            
+        }
+        */
         detailsImageBackground.hidden = true
         emailField.hidden = true
         passwordField.hidden = true
         acceptButtonOutlet.hidden = true
 
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        
-        if let username = PFUser.currentUser()?.username {
-            
-            self.performSegueWithIdentifier("startSegue", sender: self)
-            
-            
-        }
-        
-        
+
     }
     
     

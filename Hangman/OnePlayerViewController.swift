@@ -31,6 +31,8 @@ class OnePlayerViewController: UIViewController {
     
     var characterCount: Int = 0
     
+    var score: Int = 1
+    
     var count = 15
     
     var timer = NSTimer()
@@ -208,6 +210,10 @@ class OnePlayerViewController: UIViewController {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
         
+        score = self.score + Int(Double(score) * Double(count) * 0.15)
+        
+        print("asldkeu score: \(score)")
+        
         var falseLetter: Bool = true
         
         if letterState[sender.tag - 1] == 1 && gameActive == true {
@@ -266,13 +272,34 @@ class OnePlayerViewController: UIViewController {
                 
                 label = "ΜΠΡΑΒΟ ΚΕΡΔΙΣΕΣ!"
                 
-                var gamesWon: Int = 0
+                var query = PFQuery(className: "gameDetails")
                 
+                query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
+                query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
+                        if error != nil {
+                            print("asldkeu \(error)")
+                        } else if let gameScore = gameScore {
+                            print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                            gameScore.incrementKey("gamesPlayed", byAmount: 1)
+                            gameScore.incrementKey("games1PWon", byAmount: 1)
+                            gameScore["score"] = gameScore["score"] as! Int + self.score
+                            gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                                if (success) {
+                                    
+                                } else {
+                                    print("asldkeu \(error)")
+                                }
+                            })
+                    }
+
+                })
+                
+                /*
                 if let games = PFUser.currentUser()?["gamesWon"]! {
-                print("asldkeu \(games as! Int)")
+                print("asldkeu server: \(games as! Int)")
                 
                 gamesWon = (games as! Int) + 1
-                    print("asldkeu \(gamesWon)")
+                    print("asldkeu update: \(gamesWon)")
                 }
                 
                 
@@ -285,7 +312,7 @@ class OnePlayerViewController: UIViewController {
                 }
                 
                 print("asldkeu \(PFUser.currentUser()!["username"])")
-                
+                */
                 performSegueWithIdentifier("resultSegue", sender: nil)
                 
                 
