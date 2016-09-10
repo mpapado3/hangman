@@ -66,6 +66,40 @@ class WordSelectionViewController: UIViewController, UITextFieldDelegate {
         
         hiddenArray[i-1] = String(characters.last)
         
+        var query = PFUser.query()
+        query!.whereKey("objectId", notEqualTo: (PFUser.currentUser()?.objectId)!)
+        query!.findObjectsInBackgroundWithBlock { (users: [PFObject]?, error: NSError?) in
+            if error != nil {
+                self.alertMessage("Error with Users", message: String(error))
+            } else {
+                var usersArray = [String]()
+                if let users = users {
+                    for user in users {
+                        usersArray.append(user.objectId!)
+                    }
+                }
+                let selectedUserNumber = Int(arc4random_uniform(UInt32(usersArray.count)))
+                
+                let selectedUser = usersArray[selectedUserNumber]
+                
+                
+                let wordSelected = PFObject(className: "Words")
+                let acl = PFACL()
+                acl.publicReadAccess = true
+                acl.publicWriteAccess = true
+                wordSelected.ACL = acl
+                wordSelected["player1ID"] = (PFUser.currentUser()?.objectId)! as String
+                wordSelected["player2ID"] = selectedUser
+                wordSelected["word"] = self.newWord.text!
+                wordSelected.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                    if success {
+                        
+                    } else {
+                        print("asldkeu \(error!)")
+                    }
+                })
+            }
+        }
         performSegueWithIdentifier("2PlayerSegue", sender: nil)
         
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB062C681D6CB77600B8E46C /* WordSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */; };
 		AB062C6A1D6E15E300B8E46C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB062C691D6E15E300B8E46C /* SettingsViewController.swift */; };
+		AB1DBF921D84430B00C82C80 /* TwoPlayerNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1DBF911D84430B00C82C80 /* TwoPlayerNetViewController.swift */; };
 		AB2420EA1BC10DF60060EC9E /* gamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2420E91BC10DF60060EC9E /* gamePlay.swift */; };
 		AB2B9E371D50FF830005BD4F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */; };
 		AB2B9E391D50FF900005BD4F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSelectionViewController.swift; sourceTree = "<group>"; };
 		AB062C691D6E15E300B8E46C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AB1DBF911D84430B00C82C80 /* TwoPlayerNetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPlayerNetViewController.swift; sourceTree = "<group>"; };
 		AB2420E91BC10DF60060EC9E /* gamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gamePlay.swift; path = ../gamePlay.swift; sourceTree = "<group>"; };
 		AB2B9E361D50FF830005BD4F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AB2B9E381D50FF900005BD4F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 				AB062C671D6CB77600B8E46C /* WordSelectionViewController.swift */,
 				AB062C691D6E15E300B8E46C /* SettingsViewController.swift */,
 				ABE977941D6FA0D5008F6BFD /* Hangman-Bridging-Header.h */,
+				AB1DBF911D84430B00C82C80 /* TwoPlayerNetViewController.swift */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1DBF921D84430B00C82C80 /* TwoPlayerNetViewController.swift in Sources */,
 				AB2420EA1BC10DF60060EC9E /* gamePlay.swift in Sources */,
 				AB44273C1D53D0D400F91D12 /* StartViewController.swift in Sources */,
 				ABFD67931BB1F59B00411676 /* TwoPlayerViewController.swift in Sources */,

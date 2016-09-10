@@ -8,13 +8,8 @@
 
 import UIKit
 
-extension Array {
-    var last: Element {
-        return self[self.endIndex - 1]
-    }
-}
 
-class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate {
+class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDelegate {
     
     var letterState = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     
@@ -33,16 +28,16 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
     var timer = NSTimer()
     
     @IBOutlet weak var timerLabel: UILabel!
-
+    
     @IBOutlet weak var letterButton: UIButton!
     
     @IBOutlet weak var wordHidden: UILabel!
     
-
+    
     @IBOutlet weak var hangerImage2: UIImageView!
     
     @IBOutlet weak var wordTitle: UILabel!
-
+    
     
     @IBAction func letterButtonPressed(sender: AnyObject) {
         
@@ -53,7 +48,7 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
         if letterState[sender.tag - 1] == 1 && gameActive == true {
             
             letterState[sender.tag - 1] = letterActive
-
+            
             sender.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
             
             let disableMyButton = sender as? UIButton
@@ -144,7 +139,7 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                     }
                     
                 })
-
+                
                 
                 performSegueWithIdentifier("resultSegue2", sender: nil)
                 
@@ -196,7 +191,7 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 
                 
             }
-
+            
             
             
         }
@@ -287,31 +282,41 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
             
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var chosenWord = ""
+        let query = PFQuery(className: "Words")
+        query.whereKey("player2ID", equalTo: (PFUser.currentUser()?.objectId)!)
+        query.getFirstObjectInBackgroundWithBlock { (words: PFObject?, error: NSError?) in
+            if error != nil {
+                self.alertMessage("Error getting word", message: String(error))
+            } else if let word = words {
+                chosenWord = word["word"] as! String
+            }
+        }
+        
         wordHidden.text = hiddenArray.joinWithSeparator(" ")
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

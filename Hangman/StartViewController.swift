@@ -12,6 +12,22 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import ParseFacebookUtilsV4
 
+extension UIViewController {
+    
+    // extend the view controller to have the alert func globally 
+    
+    func alertMessage(title: String, message: String) {
+
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+
+    
+}
 
 class StartViewController: UIViewController {
     
@@ -243,22 +259,6 @@ class StartViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func alertMessage(title: String, message: String) {
-        
-        if #available(iOS 8.0, *) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }))
-            self.presentViewController(alert, animated: true, completion: nil)
-            
-        } else {
-            // Fallback on earlier versions
-        }
-        
-    }
-
 
     /*
     // MARK: - Navigation
