@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pJz-7X-XFW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pJz-7X-XFW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -213,7 +213,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-Qp-U1D"/>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kql-wS-pwb">
-                                <frame key="frameInset" minX="58" minY="174" width="201" height="247"/>
+                                <frame key="frameInset" minX="58" minY="174" width="202" height="247"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNW-3m-arX">
@@ -227,7 +227,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rVv-5p-Fz4">
-                                        <frame key="frameInset" minX="3" minY="89" width="195" height="69"/>
+                                        <frame key="frameInset" minX="4" minY="89" width="195" height="69"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                         <state key="normal" title="2 παίκτες">
                                             <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -237,7 +237,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RtJ-yx-UA5">
-                                        <frame key="frameInset" minY="178" width="201" height="69"/>
+                                        <frame key="frameInset" minY="178" width="202" height="69"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
                                         <state key="normal" title="Ρυθμίσεις">
                                             <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -376,18 +376,11 @@
                                 <frame key="frameInset" minY="85" width="59.06%" height="51.97%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-GD-GpT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="UjH-GD-GpT">
+                                <frame key="frameInset" minX="20" minY="350" width="280" height="34"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-Am-kGb">
-                                <frame key="frameInset" minY="65" width="13.78%" height="9.54%" maxX="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="38"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fz5-yy-bhF" userLabel="Letters Stack View">
                                 <subviews>
@@ -645,6 +638,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-Am-kGb">
+                                <frame key="frameInset" minX="237" minY="85" height="10.15%" maxX="33"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14509803921568629" green="0.54509803921568623" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -678,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0k-sr-Q7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737" y="242"/>
+            <point key="canvasLocation" x="1736.25" y="241.90140845070422"/>
         </scene>
         <!--WinViewController-->
         <scene sceneID="suN-le-PXN">
@@ -696,6 +697,13 @@
                                 <frame key="frameInset" minX="134" minY="210" width="146" height="21"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-uA-BoB">
+                                <frame key="frameInset" minX="70" minY="273" maxX="60" maxY="268"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-Fh-aad">
@@ -743,12 +751,13 @@
                     </view>
                     <connections>
                         <outlet property="looseMessageLabel" destination="Ra4-IH-5x4" id="H6H-u3-hak"/>
+                        <outlet property="scoreLabel" destination="ouJ-uA-BoB" id="bvC-Ox-9i6"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="startAgainSegue" id="NMv-wu-jqX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNq-ov-1yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2419.5" y="676.5"/>
+            <point key="canvasLocation" x="2617.5" y="675"/>
         </scene>
         <!--WordSelectionView-->
         <scene sceneID="aPa-qz-CEG">
@@ -814,9 +823,6 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="0pW-DN-IQ5"/>
-                                        <exclude reference="5Qv-hb-VKg"/>
-                                        <exclude reference="rPt-j8-USE"/>
                                         <exclude reference="5Qg-2h-fve"/>
                                         <exclude reference="5z9-sv-PMf"/>
                                         <exclude reference="Gpd-mb-zLx"/>
@@ -826,6 +832,9 @@
                                         <exclude reference="HdL-r4-Aji"/>
                                         <exclude reference="Uie-bM-eGx"/>
                                         <exclude reference="o77-Da-tGt"/>
+                                        <exclude reference="0pW-DN-IQ5"/>
+                                        <exclude reference="5Qv-hb-VKg"/>
+                                        <exclude reference="rPt-j8-USE"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -836,7 +845,6 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="0pW-DN-IQ5"/>
                                         <include reference="5Qg-2h-fve"/>
                                         <include reference="5z9-sv-PMf"/>
                                         <include reference="Gpd-mb-zLx"/>
@@ -846,6 +854,7 @@
                                         <include reference="HdL-r4-Aji"/>
                                         <include reference="Uie-bM-eGx"/>
                                         <include reference="o77-Da-tGt"/>
+                                        <include reference="0pW-DN-IQ5"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -885,7 +894,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="c47-LZ-Bgr">
-                                <frame key="frameInset" minY="86" width="50.00%" height="42.95%"/>
+                                <frame key="frameInset" minY="88" width="59.06%" height="52.29%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="B6P-3t-rCW">
@@ -1120,12 +1129,20 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-Vg-1ao">
-                                <frame key="frameInset" minX="21" minY="386" height="9.34%" maxX="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="GuM-Vg-1ao">
+                                <frame key="frameInset" minX="20" minY="350" height="15.60%" maxX="20"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nlp-5G-66D">
+                                <frame key="frameInset" minX="237" minY="85" height="10.15%" maxX="33"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960784313725" green="0.5490196078431373" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1155,6 +1172,7 @@
                     <connections>
                         <outlet property="hangerImage2" destination="c47-LZ-Bgr" id="39f-Yn-bjE"/>
                         <outlet property="letterButton" destination="aZe-rf-Sdr" id="dNv-cZ-fZQ"/>
+                        <outlet property="timerLabel" destination="Nlp-5G-66D" id="ed7-uZ-INJ"/>
                         <outlet property="wordHidden" destination="GuM-Vg-1ao" id="R4c-qN-NrL"/>
                         <outlet property="wordTitle" destination="dtd-tW-j5G" id="K4B-KK-E1V"/>
                         <segue destination="1AO-UN-vfA" kind="presentation" identifier="resultSegue2" modalPresentationStyle="overCurrentContext" id="upw-Ex-Cmh"/>
@@ -1162,7 +1180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWn-ea-NAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.8" y="906.29685157421295"/>
+            <point key="canvasLocation" x="1736.25" y="905.28169014084506"/>
         </scene>
     </scenes>
     <resources>
@@ -1175,7 +1193,7 @@
         <image name="new_player_button" width="96" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jxd-SE-D7n"/>
+        <segue reference="NMv-wu-jqX"/>
         <segue reference="upw-Ex-Cmh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -26,7 +26,13 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
     
     var gameActive = true
     
+    var count = 15
+    
     var lettersFound: Int = 0
+    
+    var timer = NSTimer()
+    
+    @IBOutlet weak var timerLabel: UILabel!
 
     @IBOutlet weak var letterButton: UIButton!
     
@@ -39,6 +45,8 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
 
     
     @IBAction func letterButtonPressed(sender: AnyObject) {
+        
+        score = score + Int(Double(score) * Double(count) * 0.15)
         
         var falseLetter: Bool = true
         
@@ -98,6 +106,46 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 
                 label = "ΜΠΡΑΒΟ ΚΕΡΔΙΣΕΣ!"
                 
+                var query = PFQuery(className: "gameDetails")
+                
+                query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
+                query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
+                    if error != nil {
+                        print("asldkeu fetching \(error!)")
+                        let gameScore = PFObject(className: "gameDetails")
+                        let acl = PFACL()
+                        acl.publicReadAccess = true
+                        acl.publicWriteAccess = true
+                        gameScore.ACL = acl
+                        gameScore["userID"] = (PFUser.currentUser()?.objectId)! as String
+                        gameScore["gamesPlayed"] = 1
+                        gameScore["games2PWon"] = 1
+                        gameScore["score"] = score
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if success {
+                                
+                            } else {
+                                print("asldkeu \(error!)")
+                            }
+                        })
+                    } else if let gameScore = gameScore {
+                        print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                        print("asldkeu objectID: \(gameScore["objectId"])")
+                        gameScore.incrementKey("gamesPlayed", byAmount: 1)
+                        gameScore.incrementKey("games2PWon", byAmount: 1)
+                        gameScore["score"] = gameScore["score"] as! Int + score
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if (success) {
+                                
+                            } else {
+                                print("asldkeu saving Object \(error!)")
+                            }
+                        })
+                    }
+                    
+                })
+
+                
                 performSegueWithIdentifier("resultSegue2", sender: nil)
                 
                 
@@ -108,6 +156,42 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 print("You Lose")
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
+                
+                var query = PFQuery(className: "gameDetails")
+                
+                query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
+                query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
+                    if error != nil {
+                        print("asldkeu fetching \(error!)")
+                        let gameScore = PFObject(className: "gameDetails")
+                        let acl = PFACL()
+                        acl.publicReadAccess = true
+                        acl.publicWriteAccess = true
+                        gameScore.ACL = acl
+                        gameScore["userID"] = (PFUser.currentUser()?.objectId)! as String
+                        gameScore["gamesPlayed"] = 1
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if success {
+                                
+                            } else {
+                                print("asldkeu \(error!)")
+                            }
+                        })
+                    } else if let gameScore = gameScore {
+                        print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                        print("asldkeu objectID: \(gameScore["objectId"])")
+                        gameScore.incrementKey("gamesPlayed", byAmount: 1)
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if (success) {
+                                
+                            } else {
+                                print("asldkeu saving Object \(error!)")
+                            }
+                        })
+                    }
+                    
+                })
+
                 
                 /*
                  let winViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -131,6 +215,92 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
         
     }
     
+    func timerUpdate() {
+        
+        timerLabel.text = String(count--)
+        
+        if count == -1 {
+            
+            timer.invalidate()
+            
+            count = 15
+            
+            wrongLetters += 1
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
+            
+            print(wrongLetters)
+            
+            if wrongLetters == 6 {
+                
+                gameActive = false
+                
+                print("You Lose")
+                
+                label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
+                
+                var query = PFQuery(className: "gameDetails")
+                
+                query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
+                query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
+                    if error != nil {
+                        print("asldkeu fetching \(error!)")
+                        let gameScore = PFObject(className: "gameDetails")
+                        let acl = PFACL()
+                        acl.publicReadAccess = true
+                        acl.publicWriteAccess = true
+                        gameScore.ACL = acl
+                        gameScore["userID"] = (PFUser.currentUser()?.objectId)! as String
+                        gameScore["gamesPlayed"] = 1
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if success {
+                                
+                            } else {
+                                print("asldkeu \(error!)")
+                            }
+                        })
+                    } else if let gameScore = gameScore {
+                        print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                        print("asldkeu objectID: \(gameScore["objectId"])")
+                        gameScore.incrementKey("gamesPlayed", byAmount: 1)
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if (success) {
+                                
+                            } else {
+                                print("asldkeu saving Object \(error!)")
+                            }
+                        })
+                    }
+                    
+                })
+                
+                
+                performSegueWithIdentifier("resultSegue", sender: self)
+                
+            }
+            
+            switch wrongLetters {
+            case 1:
+                self.hangerImage2.image = UIImage(named: "head.png")
+            case 2:
+                self.hangerImage2.image = UIImage(named: "body.png")
+            case 3:
+                self.hangerImage2.image = UIImage(named: "left_hand.png")
+            case 4:
+                self.hangerImage2.image = UIImage(named: "right_hand.png")
+            case 5:
+                self.hangerImage2.image = UIImage(named: "left_leg.png")
+            case 6:
+                self.hangerImage2.image = UIImage(named: "right_leg.png")
+            default:
+                print("nothing")
+                
+            }
+            
+        }
+    }
+
+    
 
     /*
         sender.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
@@ -144,13 +314,9 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
 
         wordHidden.text = hiddenArray.joinWithSeparator(" ")
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
+        
         // Do any additional setup after loading the view.
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
-        self.view.endEditing(true)
-        
     }
 
     override func didReceiveMemoryWarning() {

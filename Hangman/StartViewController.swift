@@ -31,20 +31,26 @@ class StartViewController: UIViewController {
     @IBAction func facebookConnect(sender: AnyObject) {
         
         
-        let permissions = ["public_profile"]
+        let permissions = ["public_profile", "email"]
         
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions, block: {(user: PFUser?, error: NSError?) -> Void in
-            
-            if let error = error {
-                print("asldkue \(error)")
-            } else {
-                if let user = user {
-                    print("asldkue \(user)")
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    print("asldkue User signed up and logged in through Facebook!")
+                    
+                    self.performSegueWithIdentifier("startSegue", sender: self)
+                } else {
+                    print("asldkue User logged in through Facebook!")
+                    
+                    self.performSegueWithIdentifier("startSegue", sender: self)
                 }
+            } else {
+                print("asldkue Uh oh. The user cancelled the Facebook login.")
             }
-            
-        })
-        /*
+        }
+        
+                /*
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
             (user: PFUser?, error: NSError?) -> Void in
             if let user = user {
@@ -177,22 +183,37 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        var currentUser = PFUser.currentUser()!["username"]
-        
-        print("asldkeu \(currentUser)")
-        
-        if currentUser != nil {
+        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email"])
+        graphRequest.startWithCompletionHandler( {
             
-            // self.performSegueWithIdentifier("startSegue", sender: self)
+            (connection, result, error) -> Void in
             
-            if let resultViewController = storyboard?.instantiateViewControllerWithIdentifier("MainViewController") {
-                presentViewController(resultViewController, animated: true, completion: nil)
+            if error != nil {
+                
+                print(error)
+                
+            } else if let result = result {
+                
+                print("asldkeu facebook \(result["name"]!)")
+                
+                PFUser.currentUser()?["username"] = result["email"]!
+                PFUser.currentUser()?["email"] = result["email"]!
+                
+                PFUser.currentUser()?.saveInBackgroundWithBlock({ (result: Bool?, error: NSError?) in
+                    if error != nil {
+                        print("asldkeu facebook user details error \(error)")
+                    } else {
+                        
+                    }
+                })
+                
+                
+                self.performSegueWithIdentifier("startSegue", sender: self)
             }
             
-            
-        }
-        */
+        })
+
+
         detailsImageBackground.hidden = true
         emailField.hidden = true
         passwordField.hidden = true
@@ -203,6 +224,8 @@ class StartViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        
+
 
     }
     

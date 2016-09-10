@@ -53,8 +53,6 @@ class WordSelectionViewController: UIViewController, UITextFieldDelegate {
         
         // print(characters)
         
-        newWord.text = ""
-        
         var i = 0
         
         for (i=0; i<characters.count; i+=1) {
@@ -75,6 +73,9 @@ class WordSelectionViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hiddenArray.removeAll()
+        wordToFind.removeAll()
         
         NSNotificationCenter.defaultCenter().addObserver(
             self,

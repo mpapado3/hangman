@@ -12,6 +12,8 @@ class WinViewController: UIViewController {
     
     @IBOutlet weak var looseMessageLabel: UILabel!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     @IBAction func playAgainButton(sender: AnyObject) {
         
         performSegueWithIdentifier("startAgainSegue", sender: nil)
@@ -22,6 +24,8 @@ class WinViewController: UIViewController {
         
         view.backgroundColor = UIColor.clearColor()
         view.opaque = false
+        
+        scoreLabel.text = "Πόντοι \(String(score))"
         
         if label != nil {
             looseMessageLabel.text = label

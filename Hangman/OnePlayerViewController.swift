@@ -11,6 +11,10 @@ import Parse
 
 var label: String!
 
+    var score: Int = 1
+
+    var currentScore = 0
+
 class OnePlayerViewController: UIViewController {
     
     var letterState = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
@@ -30,9 +34,7 @@ class OnePlayerViewController: UIViewController {
     var wordToFind = [String]()
     
     var characterCount: Int = 0
-    
-    var score: Int = 1
-    
+
     var count = 15
     
     var timer = NSTimer()
@@ -177,6 +179,42 @@ class OnePlayerViewController: UIViewController {
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
                 
+                var query = PFQuery(className: "gameDetails")
+                
+                query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
+                query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
+                    if error != nil {
+                        print("asldkeu fetching \(error!)")
+                        let gameScore = PFObject(className: "gameDetails")
+                        let acl = PFACL()
+                        acl.publicReadAccess = true
+                        acl.publicWriteAccess = true
+                        gameScore.ACL = acl
+                        gameScore["userID"] = (PFUser.currentUser()?.objectId)! as String
+                        gameScore["gamesPlayed"] = 1
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if success {
+                                
+                            } else {
+                                print("asldkeu \(error!)")
+                            }
+                        })
+                    } else if let gameScore = gameScore {
+                        print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                        print("asldkeu objectID: \(gameScore["objectId"])")
+                        gameScore.incrementKey("gamesPlayed", byAmount: 1)
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if (success) {
+                                
+                            } else {
+                                print("asldkeu saving Object \(error!)")
+                            }
+                        })
+                    }
+                    
+                })
+
+                
                 performSegueWithIdentifier("resultSegue", sender: self)
                 
             }
@@ -210,7 +248,7 @@ class OnePlayerViewController: UIViewController {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
         
-        score = self.score + Int(Double(score) * Double(count) * 0.15)
+        score = score + Int(Double(score) * Double(count) * 0.15)
         
         print("asldkeu score: \(score)")
         
@@ -277,17 +315,34 @@ class OnePlayerViewController: UIViewController {
                 query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
                 query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
                         if error != nil {
-                            print("asldkeu \(error)")
+                            print("asldkeu fetching \(error!)")
+                            let gameScore = PFObject(className: "gameDetails")
+                            let acl = PFACL()
+                            acl.publicReadAccess = true
+                            acl.publicWriteAccess = true
+                            gameScore.ACL = acl
+                            gameScore["userID"] = (PFUser.currentUser()?.objectId)! as String
+                            gameScore["gamesPlayed"] = 1
+                            gameScore["games1PWon"] = 1
+                            gameScore["score"] = score
+                            gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                                if success {
+                                    
+                                } else {
+                                    print("asldkeu \(error!)")
+                                }
+                            })
                         } else if let gameScore = gameScore {
                             print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                            print("asldkeu objectID: \(gameScore["objectId"])")
                             gameScore.incrementKey("gamesPlayed", byAmount: 1)
                             gameScore.incrementKey("games1PWon", byAmount: 1)
-                            gameScore["score"] = gameScore["score"] as! Int + self.score
+                            gameScore["score"] = gameScore["score"] as! Int + score
                             gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
                                 if (success) {
                                     
                                 } else {
-                                    print("asldkeu \(error)")
+                                    print("asldkeu saving Object \(error!)")
                                 }
                             })
                     }
@@ -325,6 +380,41 @@ class OnePlayerViewController: UIViewController {
                 print("You Lose")
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
+                
+                var query = PFQuery(className: "gameDetails")
+                
+                query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
+                query.getFirstObjectInBackgroundWithBlock({ (gameScore: PFObject?, error: NSError?) in
+                    if error != nil {
+                        print("asldkeu fetching \(error!)")
+                        let gameScore = PFObject(className: "gameDetails")
+                        let acl = PFACL()
+                        acl.publicReadAccess = true
+                        acl.publicWriteAccess = true
+                        gameScore.ACL = acl
+                        gameScore["userID"] = (PFUser.currentUser()?.objectId)! as String
+                        gameScore["gamesPlayed"] = 1
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if success {
+                                
+                            } else {
+                                print("asldkeu \(error!)")
+                            }
+                        })
+                    } else if let gameScore = gameScore {
+                        print("asldkeu gamesPlayed: \(gameScore["gamesPlayed"])")
+                        print("asldkeu objectID: \(gameScore["objectId"])")
+                        gameScore.incrementKey("gamesPlayed", byAmount: 1)
+                        gameScore.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
+                            if (success) {
+                                
+                            } else {
+                                print("asldkeu saving Object \(error!)")
+                            }
+                        })
+                    }
+                    
+                })
                 
                 performSegueWithIdentifier("resultSegue", sender: nil)
                 
