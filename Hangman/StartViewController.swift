@@ -53,16 +53,17 @@ class StartViewController: UIViewController {
             (user: PFUser?, error: NSError?) -> Void in
             if let user = user {
                 if user.isNew {
-                    print("asldkue User signed up and logged in through Facebook!")
+                    print("asldkeu User signed up and logged in through Facebook!")
                     
                     self.performSegueWithIdentifier("startSegue", sender: self)
+                    
                 } else {
-                    print("asldkue User logged in through Facebook!")
+                    print("asldkeu User logged in through Facebook!")
                     
                     self.performSegueWithIdentifier("startSegue", sender: self)
                 }
             } else {
-                print("asldkue Uh oh. The user cancelled the Facebook login.")
+                print("asldkeu Uh oh. The user cancelled the Facebook login.")
             }
         }
         
@@ -206,7 +207,7 @@ class StartViewController: UIViewController {
             
             if error != nil {
                 
-                print(error)
+                print("asldkeu Facebok Connect \(error)")
                 
             } else if let result = result {
                 
@@ -214,6 +215,7 @@ class StartViewController: UIViewController {
                 
                 PFUser.currentUser()?["username"] = result["email"]!
                 PFUser.currentUser()?["email"] = result["email"]!
+                PFUser.currentUser()?["name"] = result["name"]!
                 
                 PFUser.currentUser()?.saveInBackgroundWithBlock({ (result: Bool?, error: NSError?) in
                     if error != nil {

@@ -122,7 +122,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let user = PFUser.currentUser()!["username"] {
             
-            print("asldkeu \(user)")
             // Code to execute if user is logged in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController")

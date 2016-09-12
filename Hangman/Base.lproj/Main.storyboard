@@ -894,7 +894,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-TZ-Rnu"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="c47-LZ-Bgr">
-                                <frame key="frameInset" minY="88" width="59.06%" height="52.29%"/>
+                                <frame key="frameInset" minY="87" width="59.06%" height="52.18%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="B6P-3t-rCW">
@@ -1137,7 +1137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nlp-5G-66D">
-                                <frame key="frameInset" minX="237" minY="85" height="10.15%" maxX="33"/>
+                                <frame key="frameInset" minX="237" minY="84" height="10.33%" maxX="33"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="38"/>
@@ -1196,7 +1196,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="5XK-qA-AMb"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hanger" translatesAutoresizingMaskIntoConstraints="NO" id="WtC-q9-6hO">
-                                <frame key="frameInset" minY="88" width="59.06%" height="52.08%"/>
+                                <frame key="frameInset" minY="88" width="50.00%" height="42.92%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YCQ-qX-H2p">
@@ -1494,7 +1494,7 @@
         <image name="new_player_button" width="96" height="79"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NMv-wu-jqX"/>
+        <segue reference="Jxd-SE-D7n"/>
         <segue reference="upw-Ex-Cmh"/>
     </inferredMetricsTieBreakers>
 </document>
