@@ -101,6 +101,8 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
                 
                 label = "ΜΠΡΑΒΟ ΚΕΡΔΙΣΕΣ!"
                 
+                timer.invalidate()
+                
                 var query = PFQuery(className: "gameDetails")
                 
                 query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
@@ -141,7 +143,7 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
                 })
                 
                 
-                performSegueWithIdentifier("resultSegue2", sender: nil)
+                performSegueWithIdentifier("resultSegue3", sender: nil)
                 
                 
             } else if wrongLetters == 6 {
@@ -151,6 +153,8 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
                 print("You Lose")
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
+                
+                timer.invalidate()
                 
                 var query = PFQuery(className: "gameDetails")
                 
@@ -187,7 +191,7 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
                     
                 })
                 
-                performSegueWithIdentifier("resultSegue2", sender: nil)
+                performSegueWithIdentifier("resultSegue3", sender: nil)
                 
                 
             }
@@ -222,6 +226,8 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
                 
+                timer.invalidate()
+                
                 var query = PFQuery(className: "gameDetails")
                 
                 query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
@@ -258,7 +264,7 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
                 })
                 
                 
-                performSegueWithIdentifier("resultSegue", sender: self)
+                performSegueWithIdentifier("resultSegue3", sender: self)
                 
             }
             
@@ -285,20 +291,32 @@ class TwoPlayerNetViewController: UIViewController, UINavigationControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var chosenWord = ""
-        let query = PFQuery(className: "Words")
-        query.whereKey("player2ID", equalTo: (PFUser.currentUser()?.objectId)!)
-        query.getFirstObjectInBackgroundWithBlock { (words: PFObject?, error: NSError?) in
-            if error != nil {
-                self.alertMessage("Error getting word", message: String(error))
-            } else if let word = words {
-                chosenWord = word["word"] as! String
+        
+        if activeWord != "" {
+
+            let characters = Array(activeWord.characters)
+        
+            // print(characters)
+        
+            var i = 0
+        
+            for (i=0; i<characters.count; i+=1) {
+            
+                hiddenArray.append("_")
+                wordToFind.append(String(characters[i]))
+            
             }
+        
+            hiddenArray[0] = String(characters[0])
+        
+            hiddenArray[i-1] = String(characters.last)
+        
+            wordHidden.text = hiddenArray.joinWithSeparator(" ")
+        
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
+        } else {
+            self.alertMessage("No Word", message: "No Word is chossen")
         }
-        
-        wordHidden.text = hiddenArray.joinWithSeparator(" ")
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(OnePlayerViewController.timerUpdate), userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view.
     }

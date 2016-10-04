@@ -49,58 +49,31 @@ class WordSelectionViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func okButton(sender: AnyObject) {
         
-        let characters = Array(newWord.text!.characters)
-        
-        // print(characters)
-        
-        var i = 0
-        
-        for (i=0; i<characters.count; i+=1) {
+        if newWord.text == nil {
             
-            hiddenArray.append("_")
-            wordToFind.append(String(characters[i]))
+            self.alertMessage("Δεν Έδωσες Λέξη", message: "Δεν έχεις καταχωρήσει λέξη για τον αντίπαλο")
             
-        }
+        } else {
         
-        hiddenArray[0] = String(characters[0])
+            let characters = Array(newWord.text!.characters)
         
-        hiddenArray[i-1] = String(characters.last)
+            // print(characters)
         
-        var query = PFUser.query()
-        query!.whereKey("objectId", notEqualTo: (PFUser.currentUser()?.objectId)!)
-        query!.findObjectsInBackgroundWithBlock { (users: [PFObject]?, error: NSError?) in
-            if error != nil {
-                self.alertMessage("Error with Users", message: String(error))
-            } else {
-                var usersArray = [String]()
-                if let users = users {
-                    for user in users {
-                        usersArray.append(user.objectId!)
-                    }
-                }
-                let selectedUserNumber = Int(arc4random_uniform(UInt32(usersArray.count)))
-                
-                let selectedUser = usersArray[selectedUserNumber]
-                
-                
-                let wordSelected = PFObject(className: "Words")
-                let acl = PFACL()
-                acl.publicReadAccess = true
-                acl.publicWriteAccess = true
-                wordSelected.ACL = acl
-                wordSelected["player1ID"] = (PFUser.currentUser()?.objectId)! as String
-                wordSelected["player2ID"] = selectedUser
-                wordSelected["word"] = self.newWord.text!
-                wordSelected.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) in
-                    if success {
-                        
-                    } else {
-                        print("asldkeu \(error!)")
-                    }
-                })
+            var i = 0
+        
+            for (i=0; i<characters.count; i+=1) {
+            
+                hiddenArray.append("_")
+                wordToFind.append(String(characters[i]))
+            
             }
+            
+            hiddenArray[0] = String(characters[0])
+        
+            hiddenArray[i-1] = String(characters.last)
+        
+            performSegueWithIdentifier("2PlayerSegue", sender: nil)
         }
-        performSegueWithIdentifier("2PlayerSegue", sender: nil)
         
     }
 

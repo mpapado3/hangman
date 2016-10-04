@@ -55,32 +55,22 @@ class StartViewController: UIViewController {
                 if user.isNew {
                     print("asldkeu User signed up and logged in through Facebook!")
                     
-                    self.performSegueWithIdentifier("startSegue", sender: self)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let viewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController")
+                    self.presentViewController(viewController, animated: true, completion: nil)
                     
                 } else {
                     print("asldkeu User logged in through Facebook!")
                     
-                    self.performSegueWithIdentifier("startSegue", sender: self)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let viewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") 
+                    self.presentViewController(viewController, animated: true, completion: nil)
+
                 }
             } else {
                 print("asldkeu Uh oh. The user cancelled the Facebook login.")
             }
         }
-        
-                /*
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
-            (user: PFUser?, error: NSError?) -> Void in
-            if let user = user {
-                if user.isNew {
-                    print("asldkeu User signed up and logged in through Facebook!")
-                } else {
-                    print("asldkeu User logged in through Facebook!")
-                }
-            } else {
-                print("asldkeu Uh oh. The user cancelled the Facebook login.")
-            }
-        }
-        */
         
     }
     @IBAction func newPlayerButton(sender: AnyObject) {

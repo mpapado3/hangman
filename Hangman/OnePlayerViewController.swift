@@ -349,25 +349,6 @@ class OnePlayerViewController: UIViewController {
 
                 })
                 
-                /*
-                if let games = PFUser.currentUser()?["gamesWon"]! {
-                print("asldkeu server: \(games as! Int)")
-                
-                gamesWon = (games as! Int) + 1
-                    print("asldkeu update: \(gamesWon)")
-                }
-                
-                
-                PFUser.currentUser()?["gamesWon"] = gamesWon
-
-                do {
-                    try PFUser.currentUser()!.save()
-                } catch {
-                    print("asldkeu \(error)")
-                }
-                
-                print("asldkeu \(PFUser.currentUser()!["username"])")
-                */
                 performSegueWithIdentifier("resultSegue", sender: nil)
                 
                 

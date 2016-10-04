@@ -106,6 +106,8 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 
                 label = "ΜΠΡΑΒΟ ΚΕΡΔΙΣΕΣ!"
                 
+                timer.invalidate()
+                
                 var query = PFQuery(className: "gameDetails")
                 
                 query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
@@ -156,6 +158,8 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 print("You Lose")
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
+                
+                timer.invalidate()
                 
                 var query = PFQuery(className: "gameDetails")
                 
@@ -227,6 +231,8 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 
                 label = "ΛΥΠΑΜΑΙ ΕΧΑΣΕΣ!"
                 
+                timer.invalidate()
+                
                 var query = PFQuery(className: "gameDetails")
                 
                 query.whereKey("userID", equalTo: (PFUser.currentUser()?.objectId)!)
@@ -263,7 +269,7 @@ class TwoPlayerViewController: UIViewController, UINavigationControllerDelegate,
                 })
                 
                 
-                performSegueWithIdentifier("resultSegue", sender: self)
+                performSegueWithIdentifier("resultSegue2", sender: self)
                 
             }
             
